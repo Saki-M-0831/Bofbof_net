@@ -2,7 +2,26 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-h1 {
+// Code for large letters on carousel
+.about-title {
+  position: absolute;
+  top: 2em;
+  left: 1em;
+  font-size: 10em;
+  text-decoration: none;
+  color: white;
+}
+
+.home-title {
+  position: absolute;
+  top: 2em;
+  left: 1em;
+  font-size: 10em;
+  text-decoration: none;
+  color: white;
+}
+
+.section-title {
   border-bottom: 4px solid;
   color: black;
 }
@@ -11,12 +30,8 @@ p {
   font-size: 2em;
 }
 
-li {
-  font-size: 2em;
-}
-
 // copy&paste btn css end
-.button {
+.shiney-button {
   padding: 0.75em 2em;
   text-align: center;
   text-decoration: none;
@@ -54,19 +69,20 @@ li {
 // copy&paste btn css end
 
 // copy&paste list css
-ol {
+.bof-issue ol {
   counter-reset: item;
   list-style-type: none;
   padding-left: 0;
 }
-ol ol {
+.bof-issue ol ol {
   padding-left: 1em;
 }
-li {
+.bof-issue li {
   text-indent: -1.3em;
   padding-left: 1.3em;
+  font-size: 2em;
 }
-li:before {
+.bof-issue li:before {
   counter-increment: item;
   content: counter(item) ".";
   /* 以下は自由に装飾... */
