@@ -14,5 +14,21 @@
  *= require_self
  */
 
- @import "font-awesome";
- @import "bootstrap";
+@import "font-awesome";
+@import "bootstrap";
+
+body {
+  background-color: rgb(240, 191, 76);
+  font-weight: bold;
+  font-family: "ヒラギノ角ゴ Pro W3", Hiragino Kaku Gothic Pro, Osaka,
+    "メイリオ", Meiryo, "ＭＳ Ｐゴシック", MS P Gothic, Verdana, sans-serif;
+}
+
+body p {
+  line-height: 2;
+}
+
+// You can always write orange letters with this one.
+.orange {
+  color: rgb(232, 102, 16);
+}

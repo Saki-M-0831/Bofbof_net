@@ -1,0 +1,64 @@
+<%# Wrapping it all up %>
+<div class="wrap">
+    <%# index section %>
+    <%# Here comes a sliding image or something %>
+    <section class="index">
+        <%# Here comes the carousel %>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <%= image_tag "slide-image1.png", class: "" %>
+                </div>
+                <div class="carousel-item">
+                    <%= image_tag "slide-image2.png", class: "" %>
+                </div>
+                <div class="carousel-item">
+                    <%= image_tag "slide-image3.png", class: "" %>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <%# carousel end %>
+        <span class="home-title">BOFBOF NET</span>
+    </section>
+    <%# index section end %>
+    <%# bof-why section %>
+        <section class="bof-why">
+        <div class="container bg-light mb-5 p-5">
+            <div class="content text-center ">
+                <h1 class="display-4 mb-2 p-4">これはHOMEです</h1>
+                <p class="pb-5">ホーム</p>
+                <%= image_tag "about_us1.jpeg", class: "img-fluid" %>
+                <p class="mt-5 text-left">HOMEにも仮でレイアウトくっつけといたわ。文字のフォント・サイズ・ボタンのデザイン・諸々の色とかどう？上のカルーセルなんだけど画面ちっちゃくすると右に寄っちゃうんだよね。カルーセルの画像は背景色（rgb(240, 191, 76)）に合わせて作ったよ。↓のボタン可愛いんだけど、かわいすぎるかな？</p>
+                <br>
+                <br>
+                    <a href="#" class="shiney-button">SAMPLE</a>
+            </div>
+        </div>
+    </section>
+        <%# bof-why section end %>
+        <%# bof-activites section %>
+    <section class="bof-activites"></section>
+    <%# bof-activites section end %>
+    <%# bof-notices section %>
+    <section class="bof-notices"></section>
+    <%# bof-notices section end %>
+    <%# bof-join section %>
+    <section class="bof-join"></section>
+    <%# bof-join section end %>
+    <%# bof-members section %>
+    <section class="bof-members"></section>
+    <%# bof-members section end %>
+</div>
