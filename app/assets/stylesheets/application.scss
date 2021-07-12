@@ -24,10 +24,10 @@
  @import '@fortawesome/fontawesome-free/scss/v4-shims';
 
  html,body{
-  display: grid;
-  height: 100%;
-  width: 100%;
   background: linear-gradient(315deg, rgba(230, 159, 92, 0.788) 0%, rgba(255, 203, 82, 0.733) 74%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   font-family: "ヒラギノ角ゴ Pro W3", Hiragino Kaku Gothic Pro, Osaka,
     "メイリオ", Meiryo, "ＭＳ Ｐゴシック", MS P Gothic, Verdana, sans-serif;
 }

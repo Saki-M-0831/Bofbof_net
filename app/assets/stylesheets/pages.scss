@@ -1,101 +1,6 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-// Code for large letters on carousel
-.about-title {
-  position: absolute;
-  top: 2em;
-  left: 1em;
-  font-size: 10em;
-  text-decoration: none;
-  color: white;
-}
-
-.home-title {
-  position: absolute;
-  top: 2em;
-  left: 1em;
-  font-size: 10em;
-  text-decoration: none;
-  color: white;
-}
-
-.section-title {
-  border-bottom: 4px solid;
-  color: black;
-}
-
-.about {
-  font-weight: bold;
-}
-
-.about p {
-  font-size: 2em;
-  line-height: 2;
-}
-
-// copy&paste btn css end
-.shiney-button {
-  padding: 0.75em 2em;
-  text-align: center;
-  text-decoration: none;
-  color: rgb(240, 191, 76);
-  border: 2px solid rgb(240, 191, 76);
-  font-size: 24px;
-  display: inline-block;
-  border-radius: 0.3em;
-  transition: all 0.2s ease-in-out;
-  position: relative;
-  overflow: hidden;
-  &:before {
-    content: "";
-    background-color: rgba(255, 255, 255, 0.5);
-    height: 100%;
-    width: 3em;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: -4.5em;
-    transform: skewX(-45deg) translateX(0);
-    transition: none;
-  }
-  &:hover {
-    background-color: rgb(240, 191, 76);
-    color: #fff;
-    border-bottom: 4px solid darken(rgb(240, 191, 76), 10%);
-    text-decoration: none;
-    &:before {
-      transform: skewX(-45deg) translateX(13.5em);
-      transition: all 0.5s ease-in-out;
-    }
-  }
-}
-// copy&paste btn css end
-
-// copy&paste list css
-.bof-issue ol {
-  counter-reset: item;
-  list-style-type: none;
-  padding-left: 0;
-}
-.bof-issue ol ol {
-  padding-left: 1em;
-}
-.bof-issue li {
-  text-indent: -1.3em;
-  padding-left: 1.3em;
-  font-size: 2em;
-}
-.bof-issue li:before {
-  counter-increment: item;
-  content: counter(item) ".";
-  /* 以下は自由に装飾... */
-  padding-right: 0.5em;
-  font-weight: bold;
-  color: #b40000;
-}
-// copy&paste list css end
 :root {
   --primary-color: rgb(255, 119, 41);
   --overlay-color: rgba(255, 156, 62, 0.836);
@@ -108,13 +13,13 @@
 .menu-wrap {
   position: fixed;
   top: 15px;
-  right: 3%;
+  right: 2%;
   z-index: 1;
 }
 .menu-wrap .toggler {
   position: absolute;
   top: 15px;
-  right: 3%;
+  right: 2%;
   z-index: 2;
   cursor: pointer;
   width: 50px;
@@ -124,7 +29,7 @@
 .menu-wrap .hamburger {
   position: absolute;
   top: 15px;
-  right: 3%;
+  right: 2%;
   z-index: 1;
   width: 60px;
   height: 60px;
@@ -235,7 +140,7 @@
   content: '';
   display: block;
   width: 0;
-  height: 2px;
+  height: 5px;
   background: #fff;
   transition: width .3s;
 }
@@ -308,3 +213,97 @@
 .sns_wapper .b4 span{
   color: #1DA1F2;
 }
+// Code for large letters on carousel
+.about-title {
+  position: absolute;
+  top: 2em;
+  left: 1em;
+  font-size: 10em;
+  text-decoration: none;
+  color: white;
+}
+
+.home-title {
+  position: absolute;
+  top: 2em;
+  left: 1em;
+  font-size: 10em;
+  text-decoration: none;
+  color: white;
+}
+
+.section-title {
+  border-bottom: 4px solid;
+  color: black;
+}
+
+.about-wrap {
+  font-weight: bold;
+}
+
+.about-wrap p {
+  font-size: 2em;
+  line-height: 2;
+}
+
+// copy&paste btn css end
+.shiney-button {
+  padding: 0.75em 2em;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(240, 191, 76);
+  border: 2px solid rgb(240, 191, 76);
+  font-size: 24px;
+  display: inline-block;
+  border-radius: 0.3em;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  &:before {
+    content: "";
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 100%;
+    width: 3em;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -4.5em;
+    transform: skewX(-45deg) translateX(0);
+    transition: none;
+  }
+  &:hover {
+    background-color: rgb(240, 191, 76);
+    color: #fff;
+    border-bottom: 4px solid darken(rgb(240, 191, 76), 10%);
+    text-decoration: none;
+    &:before {
+      transform: skewX(-45deg) translateX(13.5em);
+      transition: all 0.5s ease-in-out;
+    }
+  }
+}
+// copy&paste btn css end
+
+// copy&paste list css
+.bof-issue ol {
+  counter-reset: item;
+  list-style-type: none;
+  padding-left: 0;
+}
+.bof-issue ol ol {
+  padding-left: 1em;
+}
+.bof-issue li {
+  text-indent: -1.3em;
+  padding-left: 1.3em;
+  font-size: 2em;
+}
+.bof-issue li:before {
+  counter-increment: item;
+  content: counter(item) ".";
+  /* 以下は自由に装飾... */
+  padding-right: 0.5em;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+// copy&paste list css end
