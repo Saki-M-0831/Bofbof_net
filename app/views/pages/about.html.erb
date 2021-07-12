@@ -1,106 +1,91 @@
-<section class="about">
-    <%# Wrapping it all up %>
-    <div class="about-wrap">
-        <%# index section %>
-        <%# Here comes a sliding image or something %>
-        <section class="about-index">
-            <%# Here comes the carousel %>
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+<%# Wrapping it all up %>
+<div class="about-wrap">
+    <%# index section %>
+    <%# Here comes a sliding image or something %>
+    <section class="about-index">
+        <%# Here comes the carousel %>
+        <div id="carouselExampleIndicators" class="carousel slide mx-5" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <%= image_tag "slide-image1.png", class: "" %>
+                </div>
+                <div class="carousel-item">
+                    <%= image_tag "slide-image2.png", class: "" %>
+                </div>
+                <div class="carousel-item">
+                    <%= image_tag "slide-image3.png", class: "" %>
+                </div>
+            </div>
+        </div>
+        <%# carousel end %>
+        <span class="about-title">BOFBOF NET</span>
+    </section>
+    <%# index section end %>
+    <%# section %>
+    <section class="mission">
+        <div class="container mb-5 p-5">
+                <div class="content text-center ">
+                    <h1 class="section-title display-4 pb-3 mb-5">BOFBOFの理念</h1>
+                    <p class="mt-3">知識は武器だ。
+                    <br>
+                    世の中と大学生をもっと近く。
+                    <br>
+                    世界を見る目をもっと広く。
+                    <br>
+                    知りたいは宝だ。知識は共有するべきだ。
+                    </p>
+                    <br>
+                </div>
+            </div>
+    </section>
+    <%#  section end %>
+    <%#  section %>
+    <section class="bof-why">
+        <div class="container bg-light mb-5 p-5">
+            <div class="content text-center px-5">
+                <h1 class="section-title display-4 mb-2 p-4">なぜ?「BOFBOF」</h1>
+                <p class="pb-5">BOFの由来</p>
+                <%= image_tag "about_us1.jpeg", class: "img-fluid" %>
+                <p class="mt-5 text-left">フランス語でBofとは、無関心を示す「ふうん」といったような意味で使われる言葉です。僕たちは若い世代がニュースに対して「ふうん」と無関心な状態を変えたくてBOFBOF NETという名前をつけました。</p>
+                <br>
+            </div>
+        </div>
+    </section>
+    <%#  section end %>
+    <%#  section %>
+    <section class="bof-issue">
+        <div class="container bg-light mb-5 p-5">
+            <div class="content text-center ">
+                <h1 class="section-title display-4 mb-2 p-4">Issues</h1>
+                <p class="pb-5">私たちの問題意識</p>
+                <%= image_tag "about_us2.jpeg", class: "img-fluid" %>
+                <p class="mt-5 text-center orange">無関心をなくしたい。<br>社会と大学生をもっと近く。<br>世界を見る目をもっと広く。<br>知りたいは宝だ。<br>知識は共有するべきだ。</p>
+                <br>
+                <ol class="text-left px-5">
+                    <li>海外の同世代は政治・社会問題について話し合っている人が多いのに、自分たちは少ないことへの危機感</li>
+                    <br>
+                    <li>日々のニュースに触れることで、自分の視野を広げたり、知識を深めたい</li>
+                    <br>
+                    <li>どう思いますか？どんな意見を持っていますか？に弱い自分たちを変えなくてはいけない</li>
                 </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <%= image_tag "slide-image1.png", class: "" %>
-                    </div>
-                    <div class="carousel-item">
-                        <%= image_tag "slide-image2.png", class: "" %>
-                    </div>
-                    <div class="carousel-item">
-                        <%= image_tag "slide-image3.png", class: "" %>
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
             </div>
-            <%# carousel end %>
-            <span class="about-title">BOFBOF NET</span>
-        </section>
-        <%# index section end %>
-        <%# section %>
-        <section class="mission">
-            <div class="container mb-5 p-5">
-                    <div class="content text-center ">
-                        <h1 class="section-title display-4 pb-3 mb-5">BOFBOFの理念</h1>
-                        <p class="mt-3">知識は武器だ。
-                        <br>
-                        世の中と大学生をもっと近く。
-                        <br>
-                        世界を見る目をもっと広く。
-                        <br>
-                        知りたいは宝だ。知識は共有するべきだ。
-                        </p>
-                        <br>
-                    </div>
-                </div>
-        </section>
-        <%#  section end %>
-        <%#  section %>
-        <section class="bof-why">
-            <div class="container bg-light mb-5 p-5">
-                <div class="content text-center ">
-                    <h1 class="section-title display-4 mb-2 p-4">なぜ?「BOFBOF」</h1>
-                    <p class="pb-5">BOFの由来</p>
-                    <%= image_tag "about_us1.jpeg", class: "img-fluid" %>
-                    <p class="mt-5 text-left">フランス語でBofとは、無関心を示す「ふうん」といったような意味で使われる言葉です。僕たちは若い世代がニュースに対して「ふうん」と無関心な状態を変えたくてBOFBOF NETという名前をつけました。</p>
-                    <br>
-                </div>
+        </div>
+    </section>
+    <%#  section end %>
+    <%#  section %>
+    <section class="bof-vision">
+        <div class="container bg-light mb-5 p-5">
+            <div class="content text-center ">
+                <h1 class="section-title display-4 mb-2 p-4">VISION</h1>
+                <p class="pb-5">私たちがすること</p>
+                <%= image_tag "about_us3.jpeg", class: "img-fluid" %>
+                <p class="mt-5 px-5">若者が新聞を読むことへのきっかけ作りと、<br>みんなの”知りたい”を繋げる場所を提供します</p>
+                <br>
             </div>
-        </section>
-        <%#  section end %>
-        <%#  section %>
-        <section class="bof-issue">
-            <div class="container bg-light mb-5 p-5">
-                <div class="content text-center ">
-                    <h1 class="section-title display-4 mb-2 p-4">Issues</h1>
-                    <p class="pb-5">私たちの問題意識</p>
-                    <%= image_tag "about_us2.jpeg", class: "img-fluid" %>
-                    <p class="mt-5 text-center orange">無関心をなくしたい。<br>社会と大学生をもっと近く。<br>世界を見る目をもっと広く。<br>知りたいは宝だ。<br>知識は共有するべきだ。</p>
-                    <br>
-                    <ol class="text-left">
-                        <li>海外の同世代は政治・社会問題について話し合っている人が多いのに、自分たちは少ないことへの危機感</li>
-                        <br>
-                        <li>日々のニュースに触れることで、自分の視野を広げたり、知識を深めたい</li>
-                        <br>
-                        <li>どう思いますか？どんな意見を持っていますか？に弱い自分たちを変えなくてはいけない</li>
-                    </ol>
-                </div>
-            </div>
-        </section>
-        <%#  section end %>
-        <%#  section %>
-        <section class="bof-vision">
-            <div class="container bg-light mb-5 p-5">
-                <div class="content text-center ">
-                    <h1 class="section-title display-4 mb-2 p-4">VISION</h1>
-                    <p class="pb-5">私たちがすること</p>
-                    <%= image_tag "about_us3.jpeg", class: "img-fluid" %>
-                    <p class="mt-5">若者が新聞を読むことへのきっかけ作りと、みんなの”知りたい”を繋げる場所を提供します</p>
-                    <br>
-                </div>
-            </div>
-        </section>
-        <%#  section end %>
-        <%#  section %>
-        <section class="bof-members"></section>
-        <%#  section end %>
-    </div>
-</section>
+        </div>
+    </section>
+    <%#  section end %>
+    <%#  section %>
+    <section class="bof-members"></section>
+    <%#  section end %>
+</div>
