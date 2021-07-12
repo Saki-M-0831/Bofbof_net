@@ -69,7 +69,7 @@ gem 'jquery-rails'
 
 gem 'bcrypt', '~> 3.1.7'
 
-gem "font-awesome-rails"
+gem 'font-awesome-sass', '~> 5.2.0'
 
 gem 'will_paginate', '~> 3.1.0'
 gem 'will_paginate-bootstrap4'

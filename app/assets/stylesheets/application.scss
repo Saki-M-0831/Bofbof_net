@@ -14,6 +14,7 @@
  *= require_self
  */
 
+<<<<<<< HEAD
 @import "font-awesome";
 @import "bootstrap";
 
@@ -31,4 +32,21 @@ body p {
 // You can always write orange letters with this one.
 .orange {
   color: rgb(232, 102, 16);
+=======
+@import "bootstrap";
+@import "font-awesome";
+@import "font-awesome-sprockets";
+$fa-font-path: '@fortawesome/fontawesome-free/webfonts';
+@import '@fortawesome/fontawesome-free/scss/fontawesome';
+@import '@fortawesome/fontawesome-free/scss/solid';
+@import '@fortawesome/fontawesome-free/scss/regular';
+@import '@fortawesome/fontawesome-free/scss/brands';
+@import '@fortawesome/fontawesome-free/scss/v4-shims';
+
+html,body{
+  display: grid;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(315deg, rgba(230, 159, 92, 0.788) 0%, rgba(255, 203, 82, 0.733) 74%);
+>>>>>>> nav
 }
