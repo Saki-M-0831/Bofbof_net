@@ -1,21 +1,32 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.logo-section {
+  position: fixed;
+  top: 30px;
+  left: 2%;
+  z-index: 1000;
+}
 .logo {
   box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
   margin-bottom: 5px;
+  position: fixed;
+  top: 30px;
+  left: 2%;
+  width: 10%;
+  z-index: 1000;
 }
 .menu-wrap {
   position: fixed;
   top: 15px;
   right: 2%;
-  z-index: 1;
+  z-index: 1000;
 }
 .menu-wrap .toggler {
   position: absolute;
   top: 15px;
   right: 2%;
-  z-index: 2;
+  z-index: 1001;
   cursor: pointer;
   width: 50px;
   height: 50px;
@@ -25,7 +36,7 @@
   position: absolute;
   top: 15px;
   right: 2%;
-  z-index: 1;
+  z-index: 1000;
   width: 60px;
   height: 60px;
   padding: 1rem;
@@ -52,7 +63,7 @@
 .menu-wrap .hamburger > div::after {
   content: '';
   position: absolute;
-  z-index: 1;
+  z-index: 1000;
   top: -10px;
   width: 100%;
   height: 2px;
@@ -143,7 +154,13 @@
   width: 100%;
   transition: width .3s;
 }
-.sns_wapper .sns_button{
+.sns-wapper {
+  position: fixed;
+  top: 245px;
+  left: 2%;
+  z-index: 1000;
+}
+.sns-wapper .sns-button {
   display: inline-block;
   height: 60px;
   width: 60px;
@@ -155,10 +172,10 @@
   box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
   transition: all 0.3s ease-out;
 }
-.sns_wapper .sns_button:hover{
+.sns-wapper .sns-button:hover{
   width: 200px;
 }
-.sns_wapper .sns_button .icon{
+.sns-wapper .sns-button .icon{
   display: inline-block;
   height: 60px;
   width: 60px;
@@ -168,27 +185,27 @@
   line-height: 60px;
   transition: all 0.3s ease-out;
 }
-.sns_wapper .b1:hover .icon{
+.sns-wapper .b1:hover .icon{
   background: #E1306C;
 }
-.sns_wapper .b2:hover .icon{
+.sns-wapper .b2:hover .icon{
   background: #6f1df2;
 }
-.sns_wapper .b3:hover .icon{
+.sns-wapper .b3:hover .icon{
   background: #ff0000;
 }
-.sns_wapper .b4:hover .icon{
+.sns-wapper .b4:hover .icon{
   background: #1DA1F2;
 }
-.sns_wapper .sns_button .icon i{
+.sns-wapper .sns-button .icon i{
   font-size: 25px;
   line-height: 60px;
   transition: all 0.3s ease-out;
 }
-.sns_wapper .sns_button:hover .icon i{
+.sns-wapper .sns-button:hover .icon i{
   color: #fff;
 }
-.sns_wapper .sns_button span{
+.sns-wapper .sns-button span{
   font-size: 20px;
   font-weight: 500;
   line-height: 60px;
@@ -196,16 +213,16 @@
   text-align: center;
   transition: all 0.3s ease-out;
 }
-.sns_wapper .b1 span{
+.sns-wapper .b1 span{
   color: #E1306C;
 }
-.sns_wapper .b2 span{
+.sns-wapper .b2 span{
   color: #6f1df2;
 }
-.sns_wapper .b3 span{
+.sns-wapper .b3 span{
   color: #ff0000;
 }
-.sns_wapper .b4 span{
+.sns-wapper .b4 span{
   color: #1DA1F2;
 }
 // Code for large letters on carousel
