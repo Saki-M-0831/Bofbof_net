@@ -31,12 +31,18 @@
   font-family: "ヒラギノ角ゴ Pro W3", Hiragino Kaku Gothic Pro, Osaka,
     "メイリオ", Meiryo, "ＭＳ Ｐゴシック", MS P Gothic, Verdana, sans-serif;
 }
-
-.about {
-  font-weight: bold;
+:root {
+  --primary-color: rgb(255, 119, 41);
+  --overlay-color: rgba(255, 156, 62, 0.836);
+  --menu-speed: 0.75s;
 }
-
 // You can always write orange letters with this one.
 .orange {
-  color: rgb(232, 102, 16);
+  color: rgb(255, 119, 41);
+}
+.fixed-top {
+  z-index: 0;
+}
+.logo-section .sns-section {
+  z-index: 1000;
 }
