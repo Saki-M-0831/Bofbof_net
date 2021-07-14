@@ -1,69 +1,63 @@
-<section class="mx-4 fixed-top">
-        <div class="row mt-4">
-            <div class="col-2 logo-section">
-                <%= link_to root_path do %>
-                    <%= image_tag "BOFBOF_LOGO.png", class:"w-75 logo" %>
-                <% end %>
+<section class="position-relative">
+    <div class="logo-section">
+        <%= link_to root_path do %>
+            <%= image_tag "BOFBOF_LOGO.png", class:"logo" %>
+        <% end %>
+    </div>
+    <div class="sns_wapper">
+        <div class="sns_button b1">
+            <div class="icon">
+                <%= link_to "https://www.instagram.com/bofbof_net/?hl=en", target: :_blank, class: "text-dark" do %>
+                    <i class="fab fa-instagram"></i>   
+                <% end %>   
             </div>
-        </div>
-        <div class="ml-0 sns-section">
-                <div class="sns_wapper">
-                    <div class="sns_button b1">
-                        <div class="icon">
-                            <%= link_to "https://www.instagram.com/bofbof_net/?hl=en", target: :_blank, class: "text-dark" do %>
-                                <i class="fab fa-instagram"></i>   
-                            <% end %>   
-                        </div>
-                        <span>Instagram</span>
-                    </div><br>
-                    <div class="sns_button b2">
-                        <div class="icon">
-                            <%= link_to "https://discord.gg/5N5HpEDr", target: :_blank, class: "text-dark" do %>
-                                <i class="fab fa-discord"></i>    
-                            <% end %>   
-                        </div> 
-                        <span>Discord</span>
-                    </div><br>
-                    <div class="sns_button b3">  
-                        <div class="icon">
-                            <%= link_to "https://www.youtube.com/channel/UCSmbxJi_wgyFNr2X4Z5YIcw", target: :_blank, class: "text-dark" do %>
-                                <i class="fab fa-youtube"></i>    
-                            <% end %>  
-                        </div>
-                        <span>YouTube</span>
-                    </div><br>
-                    <div class="sns_button b4">
-                        <div class="icon">
-                            <%= link_to "https://twitter.com/bofbofnet", target: :_blank, class: "text-dark" do %>
-                                <i class="fab fa-twitter"></i>    
-                            <% end %>   
-                        </div>
-                        <span>Twitter</span>
-                    </div>
-                </div> 
+            <span>Instagram</span>
+        </div><br>
+        <div class="sns_button b2">
+            <div class="icon">
+                <%= link_to "https://discord.gg/5N5HpEDr", target: :_blank, class: "text-dark" do %>
+                    <i class="fab fa-discord"></i>    
+                <% end %>   
+            </div> 
+            <span>Discord</span>
+        </div><br>
+        <div class="sns_button b3">  
+            <div class="icon">
+                <%= link_to "https://www.youtube.com/channel/UCSmbxJi_wgyFNr2X4Z5YIcw", target: :_blank, class: "text-dark" do %>
+                    <i class="fab fa-youtube"></i>    
+                <% end %>  
             </div>
+            <span>YouTube</span>
+        </div><br>
+        <div class="sns_button b4">
+            <div class="icon">
+                <%= link_to "https://twitter.com/bofbofnet", target: :_blank, class: "text-dark" do %>
+                    <i class="fab fa-twitter"></i>    
+                <% end %>   
+            </div>
+            <span>Twitter</span>
         </div>
-        <div class="menu-wrap">
-            <input type="checkbox" class="toggler">
-            <div class="hamburger"><div></div></div>
-            <div class="menu font-weight-bold">
-                <div class="row">
-                    <div class="col-6 text-right">
-                        <ul>
-                            <li><%= link_to "投稿を見る", root_path, class:"cool-link" %></li>
-                            <li><%= link_to "YouTubeをチェックする", root_path, class:"cool-link" %></li>
-                            <li><%= link_to "メンバー紹介", root_path, class:"cool-link" %></li>
-                            <li><%= link_to "ボフボフネットについて", about_path, class:"cool-link" %></li>
-                            <li><%= link_to "説明会について", root_path, class:"cool-link" %></li>
-                        </ul>
-                    </div>
-                    <div class="col-6 text-left">
-                        <ul>
-                            <li><%= link_to "プロフィール", root_path, class:"cool-link" %><br>
-                            <li><%= link_to "管理メンバーページ", root_path, class:"cool-link" %><br></li>
-                            <li><%= link_to "ログアウト", root_path, class:"cool-link" %></li></li>
-                        </ul>
-                    </div>
+    </div> 
+    <div class="menu-wrap">
+        <input type="checkbox" class="toggler">
+        <div class="hamburger"><div></div></div>
+        <div class="menu font-weight-bold">
+            <div class="row">
+                <div class="col-6 text-right">
+                    <ul>
+                        <li><%= link_to "投稿を見る", root_path, class:"cool-link" %></li>
+                        <li><%= link_to "YouTubeをチェックする", root_path, class:"cool-link" %></li>
+                        <li><%= link_to "メンバー紹介", root_path, class:"cool-link" %></li>
+                        <li><%= link_to "ボフボフネットについて", about_path, class:"cool-link" %></li>
+                        <li><%= link_to "説明会について", root_path, class:"cool-link" %></li>
+                    </ul>
+                </div>
+                <div class="col-6 text-left">
+                    <ul>
+                        <li><%= link_to "プロフィール", root_path, class:"cool-link" %><br>
+                        <li><%= link_to "管理メンバーページ", root_path, class:"cool-link" %><br></li>
+                        <li><%= link_to "ログアウト", root_path, class:"cool-link" %></li></li>
+                    </ul>
                 </div>
             </div>
         </div>
