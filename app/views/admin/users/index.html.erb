@@ -1,1 +1,57 @@
-
+<section class="admin-users container text-center pt-5 mb-5">
+    <h1 class="mb-5 pt-5">メンバーリスト</h1>
+    <div class="col-4 ml-auto pr-5 mb-2 mr-3">
+        <div class="row">
+            <div class="col-4 px-0">
+                <%= link_to "すべて", admin_users_index_path(user_filter: "all"), class:"btn btn-block #{btn_color("all")}" %>
+            </div>
+            <div class="col-4 px-0">
+                <%= link_to "管理者", admin_users_index_path(user_filter: "admin"), class:"btn btn-block #{btn_color("admin")}" %>
+            </div>
+            <div class="col-4 px-0">
+                <%= link_to "非管理者", admin_users_index_path(user_filter: "non-admin"), class:"btn btn-block #{btn_color("non-admin")}" %>
+            </div>
+        </div>
+    </div>
+    <div class="card mx-5">
+        <div class="card-header py-1">
+            <div class="row">
+                <div class="col-2">名前</div>
+                <div class="col-4">Eメール</div>
+                <div class="col-3">大学</div>
+                <div class="col-3"></div>
+            </div>
+        </div>
+        <div class="card-body ">
+            <% @users.each do |user| %>
+                <div class="row py-0">
+                    <div class="col-2 my-auto">
+                        <% if user.is_admin == true %>
+                            <small class="ml-auto"><span class="badge badge-pill remove-btn">管理者</span></small><br>
+                        <% end %>
+                        <span class="<%= admin_user(user) %>"><%= user.name %></span>
+                    </div>
+                    <div class="col-4 my-auto">
+                        <%= user.email %>
+                    </div>
+                    <div class="col-3 my-auto">
+                        <%= user.uni %>
+                    </div>
+                    <div class="col-3 my-auto">
+                        <% if user.is_admin == true %>
+                            <%= button_to "管理者解除", remove_admin_admin_user_path(user), method: :patch, class: "btn btn-outline-dark" %>
+                        <% else %>
+                            <%= button_to "管理者にする", set_admin_admin_user_path(user), method: :patch, class: "btn btn-outline-dark remove-btn" %>
+                        <% end %>
+                    </div>
+                </div>
+                <hr>
+            <% end %> 
+        </div>   
+    </div>
+    <div class="row">
+        <div class="col-6 mx-auto px-auto mt-5">
+            <div class="put-center"><%= will_paginate @users %></div>
+        </div>
+    </div>
+</section>
