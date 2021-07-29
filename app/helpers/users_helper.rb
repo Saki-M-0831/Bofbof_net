@@ -8,4 +8,5 @@ module UsersHelper
       "font-weight-bold"
     end
   end
+  
 end

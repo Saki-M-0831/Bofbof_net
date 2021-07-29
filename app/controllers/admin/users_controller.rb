@@ -1,4 +1,6 @@
 class Admin::UsersController < ApplicationController
+  before_action :require_login
+  
   def index
     @filter = params[:user_filter]
     if @filter == "admin"
