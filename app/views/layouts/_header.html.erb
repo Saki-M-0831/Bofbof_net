@@ -54,10 +54,15 @@
                 </div>
                 <div class="col-6 text-left">
                     <ul>
-                        <li><%= link_to "プロフィール", root_path, class:"cool-link" %><br>
-                        <li><%= link_to "管理メンバーページ", admin_pages_home_path, class:"cool-link" %><br></li>
-                        <li><%= link_to "サインイン", new_user_path, class:"cool-link" %><br></li>
-                        <li><%= link_to "ログアウト", root_path, class:"cool-link" %></li></li>
+                        <% if logged_in? %>
+                            <li class="text-danger"> 今ログイン中です</li>
+                            <li><%= link_to "プロフィール", root_path, class:"cool-link" %><br></li>
+                            <li><%= link_to "管理メンバーページ", admin_pages_home_path, class:"cool-link" %><br></li>
+                            <li><%= link_to "ログアウト", session_path(current_user), method: :delete, class:"cool-link" %></li>
+                        <% else %>
+                            <li><%= link_to "サインイン", new_user_path, class:"cool-link" %><br></li>
+                            <li><%= link_to "ログイン", new_session_path, class:"cool-link" %></li>
+                        <% end %>
                     </ul>
                 </div>
             </div>
