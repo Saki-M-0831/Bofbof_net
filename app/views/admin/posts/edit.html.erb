@@ -8,6 +8,14 @@
             <%= render "admin/posts/post_form" %>
             <hr>
             <%= render "admin/posts/topic_form" %>
+            <hr>
+            <div class="mr-5 text-right">
+                <% if @post.is_active == false %>
+                    <%= link_to "投稿を載せる", publicate_admin_post_path(@post), method: :patch, class: "btn btn-outline-dark bg-color put-center mt-4" %>
+                <% else %>
+                    <%= link_to "投稿を隠す", withdraw_admin_post_path(@post), method: :patch, class: "btn btn-outline-dark put-center mt-4" %>
+                <% end %>
+            </div>
         </div>
     </div>
 </section>

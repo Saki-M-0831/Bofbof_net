@@ -40,6 +40,20 @@ class Admin::PostsController < ApplicationController
     redirect_back(fallback_location: request.referer)
   end
 
+  def publicate
+    @post = Post.find(params[:id])
+    @post.update(is_active: true)
+
+    redirect_to admin_posts_url
+  end
+
+  def withdraw
+    @post = Post.find(params[:id])
+    @post.update(is_active: false)
+
+    redirect_to admin_posts_url
+  end
+
   def destroy
     @post = Post.find(params[:id])
     @post.destroy

@@ -16,9 +16,10 @@
     <div class="card mx-5">
         <div class="card-header py-1">
             <div class="row">
+                <div class="col-2 my-auto">ステータス</div>
                 <div class="col-3 my-auto">タイトル</div>
-                <div class="col-5 my-auto">概要</div>
-                <div class="col-4 text-right">
+                <div class="col-4 my-auto">概要</div>
+                <div class="col-3 text-right">
                     <%= link_to "新規", new_admin_post_path, class: "btn btn-outline-dark bg-color py-1" %>
                 </div>
             </div>
@@ -29,13 +30,20 @@
             <% else %>
                 <% @posts.each do |post| %>
                     <div class="row py-0">
-                        <div class="col-3 my-auto">
-                        <%= post.title %>
+                        <div class="col-2 my-auto">
+                            <% if post.is_active == true %>
+                                <span class="orange">掲載済み</span>
+                            <% else %>
+                                <span class="text-muted">編集中...</span>
+                            <% end %>
                         </div>
-                        <div class="col-5 my-auto">
-                            <%= post.description %>
+                        <div class="col-3 my-auto">
+                            <%= post.title %>
                         </div>
                         <div class="col-4 my-auto">
+                            <%= post.description %>
+                        </div>
+                        <div class="col-3 my-auto">
                             <div class="row">
                                 <div class="col-6">
                                     <%= link_to "編集", edit_admin_post_path(post), class: "btn btn-outline-dark bg-color py-0 btn-block" %>
