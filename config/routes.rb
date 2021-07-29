@@ -6,6 +6,27 @@ Rails.application.routes.draw do
     get 'pages/home'
     get 'users/index'
 
+    resources :posts, only: [:index, :new, :create, :edit, :update, :destroy] do
+      member do
+        patch "publicate"
+        patch "withdraw"
+      end
+
+      resources :dtopics, only: [:create, :destroy] do
+        member do
+          patch "d_choose"
+          patch "d_omit"
+        end
+      end
+
+      resources :itopics, only: [:create, :destroy] do
+        member do
+          patch "i_choose"
+          patch "i_omit"
+        end
+      end
+    end
+
     resources :users do
       member do
         patch "set_admin"
