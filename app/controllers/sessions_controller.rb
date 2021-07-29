@@ -9,11 +9,11 @@ class SessionsController < ApplicationController
 
       # ユーザー登録中にログインを済ませておく
       login(@user)
-      flash[:success] = "Yay, You're Logged In Now!!"
+      flash[:success] = "ログインに成功しました！"
 
       redirect_to root_url
     else
-      flash.now[:danger] = "Ooops, Invalid Credentials..."
+      flash.now[:danger] = "入力した情報に誤りがあります"
 
       render "new"
     end
@@ -23,7 +23,7 @@ class SessionsController < ApplicationController
     @user = User.find(params[:id])
     logout(@user)
 
-    flash[:info] = "Logged Out!! See You Again!!"
+    flash[:info] = "ログアウトしました！またね！"
     redirect_to root_url
   end
 end
