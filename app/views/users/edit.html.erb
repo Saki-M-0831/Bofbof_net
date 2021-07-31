@@ -28,14 +28,14 @@
 
                     <%# add a year form %>
                     <%= f.label :year, "年齢" %>
-                    <%= f.text_field :year, class: "form-control",:placeholder => "20/100/??" %>
+                    <%= f.text_field :year, class: "form-control", :placeholder => "半角数字で入力してください" %>
 
                     <%# add a description form %>
                     <%= f.label :description, "自己紹介" %>
                     <%= f.text_area :description, class: "form-control",:placeholder => "5行くらいがベスト！" %>
 
                     <br>
-                    <%= f.submit "送信", class: "btn btn-primary btn-block" %>
+                    <%= f.submit "保存", class: "btn btn-primary btn-block" %>
                 <% end %>
             </div>
         </div>
