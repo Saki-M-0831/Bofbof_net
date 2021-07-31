@@ -58,6 +58,7 @@
                             <li class="text-danger"> 今ログイン中です</li>
                             <li><%= link_to "プロフィール", root_path, class:"cool-link" %><br></li>
                             <li><%= link_to "管理メンバーページ", admin_pages_home_path, class:"cool-link" %><br></li>
+                            <li><%= link_to "#{current_user.name}", user_path(current_user.id), class:"cool-link" %><br></li>
                             <li><%= link_to "ログアウト", session_path(current_user), method: :delete, class:"cool-link" %></li>
                         <% else %>
                             <li><%= link_to "サインイン", new_user_path, class:"cool-link" %><br></li>

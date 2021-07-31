@@ -29,7 +29,7 @@
                         <% if user.is_admin == true %>
                             <small class="ml-auto"><span class="badge badge-pill remove-btn">管理者</span></small><br>
                         <% end %>
-                        <span class="<%= admin_user(user) %>"><%= user.name %></span>
+                        <span class="<%= admin_user(user) %>"><%= link_to user.name, user_path(user) %></span>
                     </div>
                     <div class="col-4 my-auto">
                         <%= user.email %>
