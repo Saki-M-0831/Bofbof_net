@@ -1,4 +1,7 @@
 class Admin::DtopicsController < ApplicationController
+  before_action :require_login
+  before_action :require_admin
+  
   def create
     @post = Post.find(params[:post_id])
     @d_topic = @post.dtopics.new(dtopic_params)

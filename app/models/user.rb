@@ -1,5 +1,8 @@
 class User < ApplicationRecord
+  has_many :comments, dependent: :destroy
+  
   mount_uploader :picture, PictureUploader
+  
   validates :name, presence: true, length: { maximum: 50 }
 
   EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i

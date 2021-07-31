@@ -1,0 +1,43 @@
+<h5 class="text-center mb-4" id="comment">コメント</h5>
+<% @comments.each do |c| %>
+    <div class="row">
+        <div class="col-1 text-right mr-0 pr-0 mt-2">
+            <% if !c.user.picture.nil? %>
+                <%= image_tag c.user.picture.url, class: "rounded-circle", :size => "30x30" %>
+            <% else %>
+                <%= image_tag gravatar_for(c.user), class: "rounded-circle", :size => "30x30" %>
+            <% end %> 
+        </div>
+        <div class="col-6 text-left ml-0 mr-0">
+            <small class="text-muted"><%= c.user.name %></small><br>
+            <%= c.content %>
+            <% if c.user_id == current_user.id %>
+                <%= link_to admin_post_comment_path(comment_id: c.id, post_id: @post.id),class:"text-muted", method: :delete do %>
+                    <i class="far fa-trash-alt"></i>
+                <% end %>
+            <% else %>
+                <%= link_to root_path, class: "text-dark" do  %>
+                    <i class="far fa-heart"></i>
+                <% end %>
+            <% end %>
+        </div>
+    </div>
+<% end %>
+<%= form_for([:admin, @post, @comment]) do |f| %>
+    <div class="row mt-2">
+        <div class="col-1 text-right mr-0 pr-0 mt-1">
+            <% if !current_user.picture.nil? %>
+                <%= image_tag current_user.picture.url, class: "rounded-circle", :size => "30x30" %>
+            <% else %>
+                <%= image_tag gravatar_for(current_user), class: "rounded-circle", :size => "30x30" %>
+            <% end %> 
+        </div>
+        <div class="col-6">
+            <%= f.text_field :content, class: "form-control" %>
+            <%= f.hidden_field :user_id, value: current_user.id %>
+        </div>
+        <div class="col-2 text-left ml-0 pl-0">
+            <%= f.submit "送信", class: "btn btn-outline-dark" %>
+        </div>
+    </div>
+<% end %>
