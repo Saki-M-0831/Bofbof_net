@@ -2,7 +2,7 @@
 <% @comments.each do |c| %>
     <div class="row">
         <div class="col-1 text-right mr-0 pr-0 mt-2">
-            <% if !c.user.picture.nil? %>
+            <% if c.user.picture? %>
                 <%= image_tag c.user.picture.url, class: "rounded-circle", :size => "30x30" %>
             <% else %>
                 <%= image_tag gravatar_for(c.user), class: "rounded-circle", :size => "30x30" %>
@@ -26,7 +26,7 @@
 <%= form_for([:admin, @post, @comment]) do |f| %>
     <div class="row mt-2">
         <div class="col-1 text-right mr-0 pr-0 mt-1">
-            <% if !current_user.picture.nil? %>
+            <% if current_user.picture? %>
                 <%= image_tag current_user.picture.url, class: "rounded-circle", :size => "30x30" %>
             <% else %>
                 <%= image_tag gravatar_for(current_user), class: "rounded-circle", :size => "30x30" %>
