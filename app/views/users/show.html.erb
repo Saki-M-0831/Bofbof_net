@@ -1,0 +1,26 @@
+<div class="row mt-5 mb-4">
+    <div class="col-6 bg-dark">
+        <%# 画像表示 %>
+        <% if @user.picture? %>
+            <%= image_tag @user.picture.url, :size => "650x460" %>
+        <% else %>
+            <%= image_tag "about_us3.jpeg", :size => "650x460" %>
+        <% end %>
+    </div>
+    <div class="col-6 bg-light text-center">
+        <br>
+        <%# name %>
+        <h1 class="display-4"><%= @user.name %></h1>
+        <%# uni and year %>
+        <p class=""><span><%= @user.uni %></span>  <span><%= @user.year %>歳</span></p>
+        <p class="text-center orange p-5"><%= @user.description %></p>
+        <br>
+
+    <% if logged_in? %>
+        <% if current_user.id == @user.id %>
+            <%# edit botton %>
+            <%= link_to "編集", edit_user_path, class: "btn btn-outline-dark bg-color py-0 text-center" %>
+        <% end %>
+    <% end %>
+    </div>
+</div>
