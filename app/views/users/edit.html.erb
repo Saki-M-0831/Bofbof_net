@@ -23,12 +23,12 @@
                     <%= f.password_field :password_confirmation, class: "form-control" %>
 
                     <%# add a uni form %>
-                    <%= f.label :uni, "性別" %>
-                    <%= f.select :uni, {'男性': '男性', '女性': '女性', '記述しない': '  '}, { include_blank: '選択してください...'}, { class: 'form-control' , required: true } %>
+                    <%= f.label :uni, "大学" %>
+                    <%= f.text_field :uni, class: "form-control" ,:placeholder => "大学名を記入"%>
 
                     <%# add a year form %>
                     <%= f.label :year, "年齢" %>
-                    <%= f.text_field :year, class: "form-control",:placeholder => "20/100/??" %>
+                    <%= f.text_field :year, class: "form-control",:placeholder => "20/100/?? " %>
 
                     <%# add a description form %>
                     <%= f.label :description, "自己紹介" %>
