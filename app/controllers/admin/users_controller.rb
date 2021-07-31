@@ -1,5 +1,6 @@
 class Admin::UsersController < ApplicationController
   before_action :require_login
+  before_action :require_admin
   
   def index
     @filter = params[:user_filter]

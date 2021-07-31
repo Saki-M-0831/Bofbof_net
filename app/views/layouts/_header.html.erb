@@ -55,9 +55,11 @@
                 <div class="col-6 text-left">
                     <ul>
                         <% if logged_in? %>
-                            <li class="text-danger"> 今ログイン中です</li>
+                            <li><span class="orange"><i class="fas fa-exclamation-circle"></i>現在ログイン中</span></li>
                             <li><%= link_to "プロフィール", root_path, class:"cool-link" %><br></li>
-                            <li><%= link_to "管理メンバーページ", admin_pages_home_path, class:"cool-link" %><br></li>
+                            <%if current_user.is_admin == true %>
+                                <li><%= link_to "管理メンバーページ", admin_pages_home_path, class:"cool-link" %><br></li>
+                            <% end %>
                             <li><%= link_to "ログアウト", session_path(current_user), method: :delete, class:"cool-link" %></li>
                         <% else %>
                             <li><%= link_to "サインイン", new_user_path, class:"cool-link" %><br></li>

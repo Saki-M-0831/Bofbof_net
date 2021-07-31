@@ -1,4 +1,7 @@
 class Admin::ItopicsController < ApplicationController
+  before_action :require_login
+  before_action :require_admin
+
   def create
     @post = Post.find(params[:post_id])
     @i_topic = @post.itopics.new(itopic_params)

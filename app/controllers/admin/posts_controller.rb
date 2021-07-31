@@ -1,4 +1,7 @@
 class Admin::PostsController < ApplicationController
+  before_action :require_login
+  before_action :require_admin
+
   def index
     @filter = params[:post_filter]
     if @filter == "published"
@@ -31,6 +34,8 @@ class Admin::PostsController < ApplicationController
     @d_topic = Dtopic.new
     @i_topics = Itopic.where(post_id: @post.id)
     @i_topic = Itopic.new
+    @comments = Comment.where(post_id: @post.id)
+    @comment = Comment.new
   end
 
   def update
