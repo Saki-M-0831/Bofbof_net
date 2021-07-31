@@ -1,0 +1,43 @@
+<section class="row">
+    <div class="col-6 m-auto">
+        <hr>
+        <div class="card">
+            <div class="card-body">
+                <%= form_for @user do |f| %>
+                <%= render "error_messages" %>
+                    <% if logged_in? %>
+                        <%= f.label :picture, "写真" %>
+                        <%= f.file_field :picture, class: "form-control" %>
+                        <p class="my-0 text-muted">* 横幅が大きい画像推奨</p>
+                    <% end %>
+                    <%= f.label :name, "名前" %>
+                    <%= f.text_field :name, class: "form-control" %>
+
+                    <%= f.label :email, "メールアドレス" %>
+                    <%= f.email_field :email, class: "form-control" %>
+
+                    <%= f.label :password, "パスワード" %>
+                    <%= f.password_field :password, class: "form-control" %>
+
+                    <%= f.label :password_confirmation, "確認用パスワード" %>
+                    <%= f.password_field :password_confirmation, class: "form-control" %>
+
+                    <%# add a uni form %>
+                    <%= f.label :uni, "性別" %>
+                    <%= f.select :uni, {'男性': '男性', '女性': '女性', '記述しない': '  '}, { include_blank: '選択してください...'}, { class: 'form-control' , required: true } %>
+
+                    <%# add a year form %>
+                    <%= f.label :year, "年齢" %>
+                    <%= f.text_field :year, class: "form-control",:placeholder => "20/100/??" %>
+
+                    <%# add a description form %>
+                    <%= f.label :description, "自己紹介" %>
+                    <%= f.text_area :description, class: "form-control",:placeholder => "5行くらいがベスト！" %>
+
+                    <br>
+                    <%= f.submit "送信", class: "btn btn-primary btn-block" %>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</section>
