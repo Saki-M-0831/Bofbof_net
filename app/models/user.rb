@@ -4,6 +4,7 @@ class User < ApplicationRecord
   mount_uploader :picture, PictureUploader
   
   validates :name, presence: true, length: { maximum: 50 }
+  validates :description, length: { maximum: 170 }
 
   EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
   validates :email, presence: true,
