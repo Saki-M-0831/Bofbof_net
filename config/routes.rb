@@ -26,8 +26,8 @@ Rails.application.routes.draw do
           patch "i_omit"
         end
       end
-
-      resources :comments, only: [:create, :destroy]
+      
+      resources :comments, only: [:create, :destroy] 
     end
 
     resources :users do
@@ -36,6 +36,8 @@ Rails.application.routes.draw do
         patch "remove_admin"
       end
     end
+
+    resources :videos
   end
 
   resources :users
