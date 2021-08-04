@@ -32,12 +32,17 @@
                         </div>
                         <div class="col-2 text-left my-auto">
                             <%= link_to "変更", edit_admin_video_path(video), class: "btn btn-outline-dark py-1" %>
-                            <%= link_to "削除", admin_video_path(video), method: :delete, class: "btn btn-outline-dark py-1" %>
+                            <%= link_to "削除", admin_video_path(video), method: :delete, data: {confirm: "本当にこの動画情報を削除しますか?"}, class: "btn btn-outline-dark py-1" %>
                         </div>
                     </div>
                     <hr>
                 <% end %>
             <% end %>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 mx-auto px-auto mt-5">
+            <div class="put-center"><%= will_paginate @videos %></div>
         </div>
     </div>
 </section>
