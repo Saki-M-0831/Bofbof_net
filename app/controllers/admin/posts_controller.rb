@@ -48,6 +48,7 @@ class Admin::PostsController < ApplicationController
   def publicate
     @post = Post.find(params[:id])
     @post.update(is_active: true)
+    flash[:success] = "投稿を掲載しました！"
 
     redirect_to admin_posts_url
   end
@@ -55,6 +56,7 @@ class Admin::PostsController < ApplicationController
   def withdraw
     @post = Post.find(params[:id])
     @post.update(is_active: false)
+    flash[:success] = "投稿を隠しました！"
 
     redirect_to admin_posts_url
   end
