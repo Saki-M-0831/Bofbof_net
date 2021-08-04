@@ -319,3 +319,13 @@
   color: var(--primary-color);
 }
 // copy&paste list css end
+
+.back-button{
+  position: fixed;
+  right: 2%;
+  bottom: 15%;
+  color: white;
+}
+.back-button:hover{
+  color: black;
+}

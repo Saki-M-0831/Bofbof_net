@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'pages#home'
   get '/about', to: "pages#about"
+  
 
   namespace :admin do
     get 'pages/home'
@@ -39,4 +40,9 @@ Rails.application.routes.draw do
 
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+
+  namespace :likes do
+    post 'comment_like'
+    delete 'comment_dislike'
+  end
 end
