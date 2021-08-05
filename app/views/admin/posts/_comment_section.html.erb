@@ -1,6 +1,6 @@
 <h5 class="text-center mb-4" id="comment">コメント</h5>
 <% @comments.each do |c| %>
-    <div class="row">
+    <div class="row mx-5">
         <div class="col-1 text-right mr-0 pr-0 mt-2">
             <% if c.user.picture? %>
                 <%= image_tag c.user.picture.url, class: "rounded-circle", :size => "30x30" %>
@@ -10,21 +10,29 @@
         </div>
         <div class="col-6 text-left ml-0 mr-0">
             <small class="text-muted"><%= c.user.name %></small><br>
-            <%= c.content %>
-            <% if c.user_id == current_user.id %>
-                <%= link_to admin_post_comment_path(comment_id: c.id, post_id: @post.id),class:"text-muted", method: :delete do %>
+            <span class="comment-content shadow"><%= c.content %></span>
+            <% if c.user == current_user %>
+                <%= link_to admin_post_comment_path(comment_id: c.id, post_id: @post.id), class:"text-muted", method: :delete do %>
                     <i class="far fa-trash-alt"></i>
                 <% end %>
+            <% end %>
+            
+            <% if c.likes.where(user_id: current_user.id).any? %>
+                <% @like = Like.find_by(object_id: c.id, object_type: "Comment", user_id: current_user.id) %>
+                <%= link_to likes_comment_dislike_path(like_id: @like.id, post_id: @post.id, comment_id: c.id,), class:"text-danger", method: :delete do %>
+                    <i class="fas fa-heart"></i>
+                <% end %>
             <% else %>
-                <%= link_to root_path, class: "text-dark" do  %>
+                <%= link_to likes_comment_like_path(comment_id: c.id, post_id: @post.id), class:"text-muted", method: :post do %>
                     <i class="far fa-heart"></i>
                 <% end %>
             <% end %>
+            <small class="text-muted"><%= c.likes.count %></small>
         </div>
     </div>
 <% end %>
 <%= form_for([:admin, @post, @comment]) do |f| %>
-    <div class="row mt-2">
+    <div class="row mt-4 mx-5">
         <div class="col-1 text-right mr-0 pr-0 mt-1">
             <% if current_user.picture? %>
                 <%= image_tag current_user.picture.url, class: "rounded-circle", :size => "30x30" %>

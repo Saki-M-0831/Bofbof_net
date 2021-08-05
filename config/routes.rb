@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'pages#home'
   get '/about', to: "pages#about"
+  
 
   namespace :admin do
     get 'pages/home'
@@ -25,8 +26,8 @@ Rails.application.routes.draw do
           patch "i_omit"
         end
       end
-
-      resources :comments, only: [:create, :destroy]
+      
+      resources :comments, only: [:create, :destroy] 
     end
 
     resources :users do
@@ -35,8 +36,15 @@ Rails.application.routes.draw do
         patch "remove_admin"
       end
     end
+
+    resources :videos
   end
 
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+
+  namespace :likes do
+    post 'comment_like'
+    delete 'comment_dislike'
+  end
 end

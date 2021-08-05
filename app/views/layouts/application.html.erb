@@ -7,6 +7,9 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/hot-sneaks/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
   </head>
 
   <body>
@@ -14,11 +17,11 @@
     <%= render "layouts/header" %>
 
     <% if flash.any? %>
-        <% flash.each do |type, msg| %>
-            <div class="alert alert-<%= type%> mx-5">
-                <div><%= msg %></div>
-            </div>
-        <% end %>
+      <script type="text/javascript">
+          <% flash.each do |type, value| %>
+              toastr['<%= type %>']('<%= value %>')
+          <% end %>
+      </script>
     <% end %>
 
     <%= yield %>
