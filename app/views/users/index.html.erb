@@ -1,0 +1,41 @@
+<section class="admin-home container text-center pt-5">
+    <h1 class="mb-5 pt-5 title text-white">BOFBOFメンバー</h1>
+    <div class="mt-3">
+        <%= image_tag "people.png", class:"w-100" %><br>
+        <div class="content text-center font-weight-bold">
+            <p  class="mt-3 section-title description-font mb-5 pb-5">
+                BOFBOFは全国の大学生によって企画運営される学生団体。<br>
+                メンバーについて知って、<br>
+                あなたもBOFBOFの一員になろう！！
+            </p>
+        </div>
+        <div class="row mx-5">
+            <% @users.each do |user| %>
+                <div class="col-3">
+                    <%= link_to user_path(user) do %>
+                        <% if user.picture? %>
+                            <%= image_tag user.picture.url, class: "hover", :size => "200x200" %>
+                        <% else %>
+                            <%= image_tag gravatar_for(user), class: "hover", :size => "200x200" %>
+                        <% end %>
+                    <% end %><br>
+                    <% if user.uni %>
+                        <div class="badge badge-pill badge-dark">
+                            <%= user.uni %>大学 <%= user.year %>年
+                        </div><br>
+                    <% else %>
+                        
+                    <% end %>
+                    <%= link_to user.name, user_path(user), class: "text-dark font-weight-bold" %><br>
+                    
+                    <small><%= user.description %></small>
+                </div>
+            <% end %>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 mx-auto px-auto mt-5">
+            <div class="put-center"><%= will_paginate @users %></div>
+        </div>
+    </div>
+</section>
