@@ -14,9 +14,9 @@
                 <div class="col-3">
                     <%= link_to user_path(user) do %>
                         <% if user.picture? %>
-                            <%= image_tag user.picture.url, class: "hover", :size => "200x200" %>
+                            <%= image_tag user.picture.url, class: "hover w-100"  %>
                         <% else %>
-                            <%= image_tag gravatar_for(user), class: "hover", :size => "200x200" %>
+                            <%= image_tag gravatar_for(user), class: "hover w-100" %>
                         <% end %>
                     <% end %><br>
                     <% if user.uni %>
