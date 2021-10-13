@@ -1,8 +1,11 @@
-<h1 class="text-center my-4 title">ログイン</h1>
+<div class="text-center pt-5">
+    <h1 class=" my-4 text-white title">ログイン</h1>
+</div>
 <section class="row">
     <div class="col-6 m-auto">
+        <br><br>
         <hr>
-        <div class="card">
+        <div class="card mt-5">
             <div class="card-body">
                 <%= form_for(:session, url: sessions_path(current_user)) do |f| %>
 
@@ -19,3 +22,8 @@
         </div>
     </div>
 </section>
+<div class="text-center mt-5">
+    <p>
+        アカウントをお持ちでない方は<%= link_to "こちら", new_user_path %>
+    </p>
+</div>

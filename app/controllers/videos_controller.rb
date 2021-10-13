@@ -1,6 +1,6 @@
 class VideosController < ApplicationController
   def index
-    @videos = Video.paginate(page: params[:page], per_page: 8)
+    @videos = Video.paginate(page: params[:page], per_page: 4)
   end
 
   def show
