@@ -42,6 +42,7 @@ Rails.application.routes.draw do
 
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+  resources :videos, only: [:index, :show]
 
   namespace :likes do
     post 'comment_like'

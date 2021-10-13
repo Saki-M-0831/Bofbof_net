@@ -10,7 +10,7 @@
             <%= f.label :link, "動画のURL" %>
             <%= f.text_field :link, class: "form-control mb-4", require: true %>
             <%= f.label :content, "概要・メモ" %>
-            <%= f.text_area :content, class: "form-control" %>
+            <%= f.text_area :content, placeholder: "観たくなるような誘い文句を！", class: "form-control" %>
         </div>
         <%= f.submit "保存する", class: "btn btn-outline-dark bg-color put-center mt-4" %>
     </div>
