@@ -1,2 +1,38 @@
-<h1>Videos#index</h1>
-<p>Find me in app/views/videos/index.html.erb</p>
+<section class="admin-home container text-center pt-5">
+    <h1 class="mb-5 pt-5 title text-white">BOFBOF<br>YouTube企画</h1>
+    <div class="mt-3">
+        <div class="ml-5 pl-5">
+            <%= image_tag "teacher1.png", class:"w-100 pl-5 ml-5" %><br>
+        </div>
+        <div class="content text-center font-weight-bold">
+            <p  class="mt-3 section-title description-font mb-5 pb-5">
+                <br><span class="text-white">ニュース ✖︎ 若者＝？？</span><br>
+                普段ニュースを見ない若者世代に向けた<br>
+                あなたと話題のニュースとの関連点を探る動画です<br>
+                少しでも興味が湧いたらチャンス! <br>
+                ワンクリックで動画にとぼう!
+            </p>
+        </div>
+    </div>
+    <div class="row mx-5">
+        <% @videos.each do |video| %>
+            <div class="col-6">
+                <div class="bg-white p-4 mx-1">
+                <%= link_to "#{video.link}", target: :_blank do %>
+                    <%= image_tag video.picture.url, class:"w-100 hover" %><br>
+                <% end %>
+                <%= link_to "#{video.link}", class: "text-dark font-weight-bold", target: :_blank do %>
+                    <%= video.title %><br>
+                <% end %>
+                <small class="text-dark"><%= video.content %></small>  
+                </div>     
+            </div>
+        <% end %>
+
+    </div>
+    <div class="row">
+        <div class="col-6 mx-auto px-auto mt-5">
+            <div class="put-center"><%= will_paginate @videos %></div>
+        </div>
+    </div>
+</section>

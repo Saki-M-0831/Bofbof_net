@@ -1,6 +1,6 @@
 <section class="container pt-5">
     <div class="row mb-4 mx-5 mt-5">
-        <div class="col-6 px-0">
+        <div class="col-6 p-5 bg-white">
             <%# 画像表示 %>
             <% if @user.picture? %>
                 <%= image_tag @user.picture.url, class: "profile-pic w-100" %>
@@ -8,14 +8,14 @@
                 <%= image_tag gravatar_for(@user), class: "profile-pic w-100" %>
             <% end %>
         </div>
-        <div class="col-6 bg-light text-center">
+        <div class="col-6 bg-white text-center">
             <br>
             <%# name %>
             <h1 class="display-4 mt-3"><%= @user.name %></h1>
             <%# uni and year %>
-            <p class=""><span><%= @user.uni %></span>
+            <p class=""><span><%= @user.uni %>大学</span>
                 <% if @user.year? %>
-                    <span><%= @user.year %>歳</span>
+                    <span><%= @user.year %>年生</span>
                 <% end %>
             </p>
             <% if @user.description? %>

@@ -1,5 +1,10 @@
-<div class="container">
-    <h1 class=" text-center pt-5 title">サインイン</h1>
-    <%= render "form", btn_name: "Sign Up" %>
+<div class="container text-center">
+    <h1 class=" text-white title mb-5"><br>サインイン</h1>
+    <div class="text-left mt-5">
+        <%= render "form", btn_name: "Sign Up" %>
+    </div>
     <br>
+    <p>
+    もうすでにアカウントをお持ちの方は<%= link_to "こちら", new_session_path %>
+    </p>
 </div>
