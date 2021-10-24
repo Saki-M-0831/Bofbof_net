@@ -6,8 +6,10 @@ class Admin::DtopicsController < ApplicationController
     @post = Post.find(params[:post_id])
     @d_topic = @post.dtopics.new(dtopic_params)
     if @d_topic.save
+      flash[:success] = "ニュースの候補を追加しました"
       redirect_back(fallback_location: request.referer)
     else
+      flash[:danger] = "1つのニュースあたり42文字以下にしてください。"
       redirect_back(fallback_location: request.referer)
     end
   end

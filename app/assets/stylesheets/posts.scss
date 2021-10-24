@@ -1,0 +1,31 @@
+.fx1 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  border: solid 3px rgb(0, 0, 0);
+}
+.fx2 {
+  z-index: 1000;
+  max-width: 450px;
+  padding: 3px 10px;
+  font-weight: bold;
+  overflow: visible;
+}
+
+.checkedexample input {
+  display: none;
+}
+
+.checkedexample .appear {
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.8s;
+}
+
+.checkedexample input:checked ~ .appear {
+  padding: 10px 0;
+  height: auto;
+  opacity: 1;
+}
