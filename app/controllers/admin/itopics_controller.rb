@@ -6,8 +6,10 @@ class Admin::ItopicsController < ApplicationController
     @post = Post.find(params[:post_id])
     @i_topic = @post.itopics.new(itopic_params)
     if @i_topic.save
+      flash[:success] = "ニュースの候補を追加しました"
       redirect_back(fallback_location: request.referer)
     else
+      flash[:danger] = "1つのニュースあたり42文字以下にしてください。"
       redirect_back(fallback_location: request.referer)
     end
   end
