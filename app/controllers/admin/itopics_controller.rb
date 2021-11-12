@@ -7,27 +7,28 @@ class Admin::ItopicsController < ApplicationController
     @i_topic = @post.itopics.new(itopic_params)
     if @i_topic.save
       flash[:success] = "ニュースの候補を追加しました"
-      redirect_back(fallback_location: request.referer)
     else
       flash[:danger] = "1つのニュースあたり42文字以下にしてください。"
-      redirect_back(fallback_location: request.referer)
     end
+    redirect_to edit_admin_post_url(@post, anchor: "topic")
   end
 
   def i_choose
+    @post = Post.find(params[:post_id])
     @i = params[:itopic_id]
     @topic = Itopic.find_by(id: @i)
     @topic.update(is_chosen: true)
 
-    redirect_back(fallback_location: request.referer)
+    redirect_to edit_admin_post_url(@post, anchor: "topic")
   end
 
   def i_omit
+    @post = Post.find(params[:post_id])
     @i = params[:itopic_id]
     @topic = Itopic.find_by(id: @i)
     @topic.update(is_chosen: false)
 
-    redirect_back(fallback_location: request.referer)
+    redirect_to edit_admin_post_url(@post, anchor: "topic")
   end
 
   def destroy
@@ -35,7 +36,7 @@ class Admin::ItopicsController < ApplicationController
     @topic = Itopic.find_by(id: @i)
     @topic.destroy
 
-    redirect_back(fallback_location: request.referer)
+    redirect_to edit_admin_post_url(@post, anchor: "topic")
   end
 
   def itopic_params
