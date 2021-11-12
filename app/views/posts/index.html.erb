@@ -1,54 +1,82 @@
 <section class="admin-home container text-center pt-5">
-    <h1 class="mb-5 pt-5 title text-white">BOFBOF 投稿一覧</h1>
-    <div class="mt-3">
-        <div class="pl-5">
-            <%= image_tag "people.png", class:"w-100" %><br>
-        </div>
-        
-        <div class="content text-center font-weight-bold">
-            <p  class="mt-3 section-title description-font mb-5 pb-5">
-                BOFBOFは全国の大学生によって企画運営される学生団体。<br>
-                メンバーについて知って、<br>
-                あなたもBOFBOFの一員になろう！！
-            </p>
-        </div>
-        <div class="row mx-5 text-black">
-            <% @posts.each do |post| %>
-                <div class="fx1 mb-5">
-                    <div class="checkedexample">
-                        <label for="labeltest">
-                            <span class="fx2"><%= post.title%></span>
-                        </label>
-                        <input type="checkbox" id="labeltest"/>
-                        <div class="appear row">
-                            <div class="col-6">
-                                <p>
-                                    <% @dtopics = Dtopic.where(is_chosen: true, post_id: post.id) %>
-                                    <%# Dtopicの集まりの中のis_chosenがtrueのやつを探し、post_idってやつがループのがかのidを使えと言ってるやつを@dtopicsという変数に代入 %>
-                                    <% @dtopics.each do |dtopic| %>
-                                    <%# @dtopicsという変数を使ってループ %>
-                                        <%= dtopic.content %><br>
-                                    <% end %>
-                                </p>
-                            </div>
-                            <div class="col-6">
-                                <p>
-                                    <% @itopics = Itopic.where(is_chosen: true, post_id: post.id) %>
-                                    <% @itopics.each do |itopic| %>
-                                        <%= itopic.content %><br>
-                                    <% end %>
-                                </p>
+    <h1 class="mb-5 pt-5 title text-white">BOFBOF まとめニュース<br>投稿一覧</h1>
+    <div>
+        <%= image_tag "bofbofposts.png", class:"w-100" %><br>
+    </div>
+
+    <div class="content text-center font-weight-bold">
+        <p  class="mt-3 section-title description-font mb-5 pb-5">
+            BOFBOFのメンバーで、<br>毎日ニュースを国内・国際にわけて5本づつ配信！！<br>
+            このページでチェックもよし、<br>
+            興味が出たら
+            <span class="insta orange"><%= link_to "インスタグラム", target: :_blank %></span>
+            に飛んでみよう！！
+        </p>
+    </div>
+    <div class="my-3 ml-5 pb-3" id="search">
+        <%= search_form_for @q, url: posts_url(anchor: "search") do |f| %>
+            <div class="row">
+                <div class="col-4 mr-0 pr-0">
+                    <%= f.search_field :title_or_itopics_content_or_dtopics_content_cont, placeholder: "キーワードで検索", class: "form-control text-center" %>
+                </div>
+                <div class="col-1 ml-0 pl-0">
+                    <%= f.submit "検索",　name: "", class: "btn btn-outline-dark bg-color ml-0" %>
+                </div>
+            </div>
+        <% end %>
+    </div>
+    <section class="mx-5 text-black">
+        <% @posts.each_with_index do |post, index| %>
+            <div class="card w-100 mb-3" id="accordion">
+                <div class="mb-2 bg-white py-2 fx1">
+                    <div>
+                        <h4>
+                            <a data-toggle="collapse" class="fx2" data-parent="#accordion" href="#collapse<%= index+1 %>">
+                            <span><%= post.title%></span>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse<%= index+1 %>" class="collapse">
+                        <div class="">
+                            <div class="row px-5 py-3">
+                                <div class="col-2 my-auto">
+                                    <div class="division-pic shadow"><h2><i class="fas fa-mountain"></i>国内</h2></div>
+                                </div>
+                                <div class="col-4 text-left my-auto">
+                                    <p>
+                                        <% @dtopics = Dtopic.where(is_chosen: true, post_id: post.id) %>
+                                        <%# Dtopicの集まりの中のis_chosenがtrueのやつを探し、post_idってやつがループのがかのidを使えと言ってるやつを@dtopicsという変数に代入 %>
+                                        <ul>
+                                            <% @dtopics.each do |dtopic| %>
+                                            <%# @dtopicsという変数を使ってループ %>   
+                                                <li><%= dtopic.content %></li>  
+                                            <% end %>
+                                        </ul>
+                                    </p>
+                                </div>
+                                <div class="col-2 my-auto">
+                                    <div class="division-pic shadow"><h2><i class="fas fa-globe-asia"></i>国際</h2></div>
+                                </div>
+                                <div class="col-4 text-left my-auto">
+                                    <p>
+                                        <% @itopics = Itopic.where(is_chosen: true, post_id: post.id) %>
+                                        <ul>
+                                            <% @itopics.each do |itopic| %>
+                                                <li><%= itopic.content %></li>
+                                            <% end %>
+                                        </ul>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            <% end %>
-        </div>
-    </div>
+            </div>    
+        <% end %>
+    </section>
     <div class="row">
         <div class="col-6 mx-auto px-auto mt-5">
             <div class="put-center"><%= will_paginate @posts %></div>
         </div>
     </div>
 </section>
-

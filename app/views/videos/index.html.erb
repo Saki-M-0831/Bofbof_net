@@ -14,8 +14,8 @@
             </p>
         </div>
     </div>
-    <div class="search-box pl-3 mx-5 mb-4">
-        <%= search_form_for @q do |f| %>
+    <div class="search-box pl-3 mx-5 mb-4" id="search">
+        <%= search_form_for @q, url: videos_url(anchor: "search") do |f| %>
             <div class="row">
                 <div class="col-4 mr-0 pr-0">
                     <%= f.search_field :title_or_content_cont, placeholder: "キーワードで検索", class: "form-control text-center" %>

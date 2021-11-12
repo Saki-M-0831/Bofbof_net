@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'posts/index'
   root 'pages#home'
   get '/about', to: "pages#about"
 
@@ -42,7 +41,8 @@ Rails.application.routes.draw do
 
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
-  resources :videos, only: [:index, :show]
+  resources :videos, only: [:index]
+  resources :posts, only: [:index]
 
   namespace :likes do
     post 'comment_like'
