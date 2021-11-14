@@ -1,8 +1,8 @@
 <%# Wrapping it all up %>
-<div class="about-wrap">
+<div class="pages-wrap">
     <%# index section %>
     <%# Here comes a sliding image or something %>
-    <section class="about-index">
+    <section class="pages-index">
         <%# Here comes the carousel %>
         <div id="carouselExampleIndicators" class="carousel slide mx-5" data-ride="carousel">
             <div class="carousel-inner">
@@ -18,7 +18,7 @@
             </div>
         </div>
         <%# carousel end %>
-        <span class="about-title">BOFBOF NET</span>
+        <span class="pages-title">BOFBOF NET</span>
     </section>
     <%# index section end %>
     <%# section %>
@@ -79,13 +79,48 @@
                 <h1 class="section-title display-4 mb-2 p-4">VISION</h1>
                 <p class="pb-5">私たちがすること</p>
                 <%= image_tag "about_us3.jpeg", class: "img-fluid" %>
-                <p class="mt-5 px-5">若者が新聞を読むことへのきっかけ作りと、<br>みんなの”知りたい”を繋げる場所を提供します</p>
+                <p class="mt-5 px-5">若者が新聞を読むことへのきっかけ作りと、<br>みんなの”知りたい”を繋げる場所を提供します。</p>
                 <br>
+            </div>
+        </div>
+    </section>
+    <section class="">
+        <div class="container bg-color mb-5 p-5">
+            <div class="content text-center text-white">
+                <p class="px-5">
+                <span class="text-dark">「ニュースは知っておきたい、<br>
+                でも独りじゃあ続かないし大変かも。」</span><br>
+                そんな人にこそ入ってほしい、みんなで情報・知識を集め、共有して自分の視野も広げられる。</p>
             </div>
         </div>
     </section>
     <%#  section end %>
     <%#  section %>
-    <section class="bof-members"></section>
+    <section class="container mt-5 mb-5">
+        <div class="row text-center">
+            <div class="col-4 bg-white text-black px-5 py-5">
+                <h2 class="my-5 about-platforms-title">インスタグラム<i class="fab fa-instagram"></i></h2>
+                <span class="bof-activity my-auto">
+                BOFBOF NETの活動はインスタグラムがメイン！！<br>
+                毎日のニュース発信や活動報告などをしています！
+                </span>
+            </div>
+            <div class="col-4 bg-color text-white px-5 py-5">
+                <h2 class="my-5 about-platforms-title">ディスコード<i class="fab fa-discord"></i></h2>
+                <span class="bof-activity my-auto">
+                不定期にメンバーが集まって勉強会を開いています。<br>
+                ディスカッション方式で、話題のニュースなどについて意見交換しています！<br>
+                </span>
+            </div>
+            <div class="col-4 bg-white text-black px-5 py-5">
+                <h2 class="my-5 about-platforms-title">YouTube<i class="fab fa-youtube"></i></h2>
+                <span class="bof-activity my-auto">
+                ニュースを読まない若者をターゲットに、<br>
+                若い世代が知るべきニュースをピックアップ！！<br>
+                わかりやすく動画解説しています！
+                </span>
+            </div>
+        </div>
+    </section>
     <%#  section end %>
 </div>

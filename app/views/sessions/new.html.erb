@@ -16,7 +16,7 @@
                     <%= f.password_field :password, class: "form-control" %>
 
                     <br>
-                    <%= f.submit "Log-in", class: "btn btn-primary btn-block" %>
+                    <%= f.submit "ログインする", class: "btn btn-outline-dark bg-color btn-block" %>
                 <% end %>
             </div>
         </div>
@@ -24,6 +24,6 @@
 </section>
 <div class="text-center mt-5">
     <p>
-        アカウントをお持ちでない方は<%= link_to "こちら", new_user_path %>
+        アカウントをお持ちでない方は<span class="orange"><%= link_to "こちら", new_user_path %></span>
     </p>
 </div>

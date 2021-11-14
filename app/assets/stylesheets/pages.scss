@@ -226,16 +226,7 @@
   color: #1DA1F2;
 }
 // Code for large letters on carousel
-.about-title {
-  position: absolute;
-  top: 2em;
-  left: 1em;
-  font-size: 10em;
-  text-decoration: none;
-  color: white;
-}
-
-.home-title {
+.pages-title {
   position: absolute;
   top: 2em;
   left: 1em;
@@ -249,11 +240,11 @@
   color: black;
 }
 
-.about-wrap {
+.pages-wrap {
   font-weight: bold;
 }
 
-.about-wrap p {
+.pages-wrap p {
   font-size: 2em;
   line-height: 2;
 }
@@ -338,4 +329,14 @@
 .back-button:hover{
   background-color: var(--primary-color);
   color: white;
+}
+.about-platforms-title {
+  border-bottom: 4px solid;
+  font-weight: bolder;
+}
+.bof-activity {
+  font-size: 23px;
+}
+.contact-form{
+  border: 2px solid black;
 }

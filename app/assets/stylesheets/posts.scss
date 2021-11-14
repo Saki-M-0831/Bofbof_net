@@ -19,7 +19,11 @@
   color: var(--primary-color);
   border-bottom: 3px solid var(--primary-color);
 }
-.insta {
+.insta-link {
   color: var(--primary-color);
   text-decoration: none;
+}
+.insta-link:hover {
+  text-decoration: none;
+  border-bottom: 3px solid var(--primary-color);
 }

@@ -1,15 +1,10 @@
 <%# Wrapping it all up %>
-<div class="wrap">
+<div class="pages-wrap">
     <%# index section %>
     <%# Here comes a sliding image or something %>
-    <section class="index">
+    <section class="pages-index">
         <%# Here comes the carousel %>
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
+        <div id="carouselExampleIndicators" class="carousel slide mx-5" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <%= image_tag "slide-image1.png", class: "" %>
@@ -21,44 +16,157 @@
                     <%= image_tag "slide-image3.png", class: "" %>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
         </div>
         <%# carousel end %>
-        <span class="home-title">BOFBOF NET</span>
+        <span class="pages-title">BOFBOF NET</span>
     </section>
     <%# index section end %>
     <%# bof-why section %>
         <section class="bof-why">
-        <div class="container bg-light mb-5 p-5">
+        <div class="container bg-light mb-5 p-5 shadow">
             <div class="content text-center ">
-                <h1 class="display-4 mb-2 p-4">これはHOMEです</h1>
-                <p class="pb-5">ホーム</p>
+                <h1 class="section-title display-4 mb-5 p-4">BOFBOF NETとは？？</h1>
                 <%= image_tag "about_us1.jpeg", class: "img-fluid" %>
-                <p class="mt-5 text-left">HOMEにも仮でレイアウトくっつけといたわ。文字のフォント・サイズ・ボタンのデザイン・諸々の色とかどう？上のカルーセルなんだけど画面ちっちゃくすると右に寄っちゃうんだよね。カルーセルの画像は背景色（rgb(240, 191, 76)）に合わせて作ったよ。↓のボタン可愛いんだけど、かわいすぎるかな？</p>
-                <br>
-                <br>
-                    <a href="#" class="shiney-button">SAMPLE</a>
+                <div class="row my-5 shadow">
+                    <div class="col-6 pl-5 my-auto">
+                        <%= image_tag "BOFBOF_LOGO_small.png", class: "w-100" %>
+                    </div>
+                    <div class="col-6 text-left">
+                        <p class="mt-3">
+                        知識は武器だ。<br>
+                        世の中と大学生をもっと近く。<br>
+                        世界を見る目をもっと広く。<br>
+                        知りたいは宝だ。<br>
+                        知識は共有するべきだ。
+                        </p>
+                    </div>
+                </div>
+                <P>
+                知識への貪欲さをエネルギーにはじまった<br>
+                大学生からなる団体BOFBOF NET。<br>
+                独りでは新聞を読み続けられるか心配な人こそ、<br>
+                みんなでニュースを持ち寄って興味を広げよう！！</P>
+                <%= link_to "もっと読む", about_path, class: "shiney-button" %>
             </div>
         </div>
     </section>
-        <%# bof-why section end %>
-        <%# bof-activites section %>
-    <section class="bof-activites"></section>
-    <%# bof-activites section end %>
-    <%# bof-notices section %>
-    <section class="bof-notices"></section>
-    <%# bof-notices section end %>
-    <%# bof-join section %>
-    <section class="bof-join"></section>
-    <%# bof-join section end %>
-    <%# bof-members section %>
-    <section class="bof-members"></section>
-    <%# bof-members section end %>
+    <section class="bof-activites">
+        <div class="container mb-5 p-5 bg-white">
+                <div class="content text-center ">
+                    <h1 class="section-title display-4 pb-3 mb-5">BOFBOFの活動</h1>
+                    <p class="mt-3">
+                        インスタグラム、ディスコード、YouTubeなどのSNSを活用し、<br>
+                        みんなで新聞・気になるニュースを共有して活動しています。<br>
+                        オンラインでの活動により、全国どこからでも参加できる！<br>
+                        現メンバーも複数の大学からの生徒が集まります。<br>
+                    </p>
+                    <div class="row">
+                        <div class="col-6">
+                            <p><%= link_to "ニュース投稿をチェック", posts_path, class:"orange" %></p>
+                        </div>
+                        <div class="col-6">
+                            <p><%= link_to "YouTubeをチェック", videos_path, class:"orange" %></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section class="container mt-5 mb-5">
+        <div class="row text-center">
+            <div class="col-4 bg-white text-black px-5 py-5">
+                <h2 class="my-5 about-platforms-title">インスタグラム<i class="fab fa-instagram"></i></h2>
+                <span class="bof-activity my-auto">
+                私たちの活動のメイン！！<br>
+                毎日のニュースや活動報告などを見やすくお届け！
+                </span>
+                <div class="shadow my-3">
+                    <%= image_tag "bof_insta.png", class: "w-100" %>
+                </div>
+               
+            </div>
+            <div class="col-4 bg-color text-white px-5 py-5">
+                <h2 class="my-5 about-platforms-title">ディスコード<i class="fab fa-discord"></i></h2>
+                <span class="bof-activity my-auto">
+                メンバーが集まって勉強会を開いています。<br>
+                ディスカッション方式で、話題のニュースなどについて意見交換！<br>
+                </span>
+                <div class="shadow my-3">
+                    <%= image_tag "bof_discord.png", class: "w-100" %>
+                </div>
+            </div>
+            <div class="col-4 bg-white text-black px-5 py-5">
+                <h2 class="my-5 about-platforms-title">YouTube<i class="fab fa-youtube"></i></h2>
+                <span class="bof-activity my-auto">
+                若い世代が知るべきニュースをピックアップして<br>
+                わかりやすく動画解説しています！
+                </span>
+                <div class="shadow my-3">
+                    <%= image_tag "bof_yt.png", class: "w-100" %>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bof-notices">
+        <div class="container mb-5 p-5 bg-dark text-white">
+                <div class="content text-center">
+                    <h1 class="section-title display-4 pb-3 mb-5 text-white">BOFBOFのイベント・ニュース</h1>
+                    <p class="mt-3">
+
+                    </p>
+                </div>
+            </div>
+    </section>
+    <section class="bof-join">
+        <div class="container mb-5 p-5 bg-color text-white">
+                <div class="content text-center" id="contact">
+                    <h1 class="section-title display-4 pb-3 mb-5">BOFBOFに興味がおありの<br>そこのあなたへ</h1>
+                    <p class="my-3">
+                        少しでも興味がそそられたら気軽にご連絡ください！！<br>
+                        次のフォームから質問を送るもよし、<br>
+                        インスタのDMからのご連絡もお待ちしております！！<br>
+                        <small>※質問はBOFBNOF NET自体のことでも、説明会のことでもなんでもありです！！</small>
+                    </p>
+                    <%= render "form_contact" %>
+                    <p><small>※ご返信は上記のメールアドレスに送らせていただきます。</small></p>
+                </div>
+            </div>
+    </section>
+    <section class="bof-members">
+        <div class="container mb-5 p-5 bg-white">
+                <div class="content text-center">
+                    <h1 class="section-title display-4 pb-3 mb-5">BOFBOFのメンバーたち</h1>
+                    <div class="row mx-5">
+                        <% @users.each do |user| %>
+                            <div class="col-3">
+                                <div class="bg-white p-4 mx-1">
+                                    <%= link_to user_path(user) do %>
+                                        <% if user.picture? %>
+                                            <%= image_tag user.picture.url, class: "hover w-100"  %>
+                                        <% else %>
+                                            <%= image_tag gravatar_for(user), class: "hover w-100" %>
+                                        <% end %>
+                                    <% end %><br>
+                                    <% if user.uni %>
+                                        <div class="badge badge-pill badge-dark">
+                                            <%= user.uni %>大学 <%= user.year %>年
+                                        </div><br>
+                                    <% else %>
+                                        
+                                    <% end %>
+                                    <%= link_to user.name, user_path(user), class: "text-dark font-weight-bold" %><br>
+                                </div>
+                            </div>
+                        <% end %>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 mx-auto px-auto mt-5">
+                            <div class="put-center"><%= will_paginate @users %></div>
+                        </div>
+                    </div>
+                    <p class="text-right">
+                        <%= link_to "メンバーをチェック", users_path, class:"orange" %>
+                    </p>
+                </div>
+            </div>
+    </section>
 </div>
