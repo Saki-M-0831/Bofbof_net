@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
 
       redirect_to root_url
     else
-      flash.now[:danger] = "入力した情報に誤りがあります"
+      flash[:error] = "入力した情報に誤りがあります"
 
       render "new"
     end

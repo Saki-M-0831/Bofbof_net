@@ -23,30 +23,34 @@
             </div>
         </div>
         <div class="card-body ">
-            <% @users.each do |user| %>
-                <div class="row py-0">
-                    <div class="col-2 my-auto">
-                        <% if user.is_admin == true %>
-                            <small class="ml-auto"><span class="badge badge-pill remove-btn">管理者</span></small><br>
-                        <% end %>
-                        <span class="<%= admin_user(user) %>"><%= link_to user.name, user_path(user) %></span>
+            <% if !@users.any? %>
+                <h4 class="text-muted">まだメンバーがいません。</h4>
+            <% else %>
+                <% @users.each do |user| %>
+                    <div class="row py-0">
+                        <div class="col-2 my-auto">
+                            <% if user.is_admin == true %>
+                                <small class="ml-auto"><span class="badge badge-pill remove-btn">管理者</span></small><br>
+                            <% end %>
+                            <span class="<%= admin_user(user) %>"><%= link_to user.name, user_path(user) %></span>
+                        </div>
+                        <div class="col-4 my-auto">
+                            <%= user.email %>
+                        </div>
+                        <div class="col-3 my-auto">
+                            <%= user.uni %>
+                        </div>
+                        <div class="col-3 my-auto">
+                            <% if user.is_admin == true %>
+                                <%= button_to "管理者解除", remove_admin_admin_user_path(user), method: :patch, class: "btn btn-outline-dark" %>
+                            <% else %>
+                                <%= button_to "管理者にする", set_admin_admin_user_path(user), method: :patch, class: "btn btn-outline-dark remove-btn" %>
+                            <% end %>
+                        </div>
                     </div>
-                    <div class="col-4 my-auto">
-                        <%= user.email %>
-                    </div>
-                    <div class="col-3 my-auto">
-                        <%= user.uni %>
-                    </div>
-                    <div class="col-3 my-auto">
-                        <% if user.is_admin == true %>
-                            <%= button_to "管理者解除", remove_admin_admin_user_path(user), method: :patch, class: "btn btn-outline-dark" %>
-                        <% else %>
-                            <%= button_to "管理者にする", set_admin_admin_user_path(user), method: :patch, class: "btn btn-outline-dark remove-btn" %>
-                        <% end %>
-                    </div>
-                </div>
-                <hr>
-            <% end %> 
+                    <hr>
+                <% end %> 
+            <% end %>
         </div>   
     </div>
     <div class="row">

@@ -8,7 +8,7 @@ class Admin::ItopicsController < ApplicationController
     if @i_topic.save
       flash[:success] = "ニュースの候補を追加しました"
     else
-      flash[:danger] = "1つのニュースあたり42文字以下にしてください。"
+      flash[:error] = "1つのニュースあたり42文字以下にしてください。"
     end
     redirect_to edit_admin_post_url(@post, anchor: "topic")
   end
