@@ -5,7 +5,7 @@
     </div>
 
     <div class="content text-center font-weight-bold">
-        <p  class="mt-3 section-title description-font mb-5 pb-5">
+        <p  class="mt-3 section-title mb-5 pb-5">
             毎日BOFBOFのメンバーが、<br>
             ニュースを国内・国際にわけて<br>
             それぞれ5本づつピックアップして配信！！<br>
@@ -20,10 +20,10 @@
     <div class="my-3 ml-5 pb-3" id="search">
         <%= search_form_for @q, url: posts_url(anchor: "search") do |f| %>
             <div class="row">
-                <div class="col-4 mr-0 pr-0">
+                <div class="col-5 col-md-4 mr-0 pr-0">
                     <%= f.search_field :title_or_itopics_content_or_dtopics_content_cont, placeholder: "キーワードで検索", class: "form-control text-center" %>
                 </div>
-                <div class="col-1 ml-0 pl-0">
+                <div class="col-2 col-md-1 ml-0 pl-0">
                     <%= f.submit "検索",　name: "", class: "btn btn-outline-dark bg-color ml-0" %>
                 </div>
             </div>
