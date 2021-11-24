@@ -25,7 +25,7 @@
  @import "toastr";
 
  html,body{
-  background: linear-gradient(315deg, rgba(230, 159, 92, 0.788) 0%, rgba(255, 217, 0, 0.267) 74%);
+  background: linear-gradient(315deg, rgba(230, 159, 92, 0.836) 0%, rgba(255, 217, 0, 0.267) 74%);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -54,7 +54,7 @@
 .title {
   border-bottom: 5px solid white;
   font-weight: bold;
-  font-size: 8vw;
+  font-size: 7vw;
   padding-bottom: 5px;
   display:inline;
 }
@@ -63,4 +63,9 @@
 }
 .hover:hover{
   opacity: .6;
+}
+.section-title-s {
+  font-size: 3.5vw;
+  border-bottom: 4px solid;
+  color: black;
 }

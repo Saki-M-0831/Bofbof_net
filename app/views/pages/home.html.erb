@@ -123,7 +123,7 @@
                         少しでも興味がそそられたら気軽にご連絡ください！！<br>
                         次のフォームから質問を送るもよし、<br>
                         インスタのDMからのご連絡もお待ちしております！！<br>
-                        <small>※質問はBOFBNOF NET自体のことでも、説明会のことでもなんでもありです！！</small>
+                        <small>※質問はBOFBNOF NET自体のことや、説明会のことなどなんでも！</small>
                     </p>
                     <%= render "form_contact" %>
                     <p><small>※ご返信は上記のメールアドレスに送らせていただきます。</small></p>
@@ -157,11 +157,13 @@
                             </div>
                         <% end %>
                     </div>
-                    <div class="row">
-                        <div class="col-6 mx-auto px-auto mt-5">
-                            <div class="put-center"><%= will_paginate @users %></div>
+                    <% if @users.count > 4 %>
+                        <div class="row">
+                            <div class="col-6 mx-auto px-auto mt-5">
+                                <div class="put-center"><%= will_paginate @users %></div>
+                            </div>
                         </div>
-                    </div>
+                    <% end %>
                     <p class="text-right">
                         <%= link_to "メンバーをチェック", users_path, class:"orange" %>
                     </p>
