@@ -3,13 +3,13 @@
     <div class="col-4 ml-auto mt-5 pr-5 mb-2 mr-3">
         <div class="row">
             <div class="col-4 px-0">
-                <%= link_to "すべて", admin_posts_path(post_filter: "all"), class:"btn btn-block #{post_btn_color("all")}" %>
+                <%= link_to "すべて", admin_notices_path(post_filter: "all"), class:"btn btn-block #{post_btn_color("all")}" %>
             </div>
             <div class="col-4 px-0">
-                <%= link_to "掲載済み", admin_posts_path(post_filter: "published"), class:"btn btn-block #{post_btn_color("published")}" %>
+                <%= link_to "掲載済み", admin_notices_path(post_filter: "published"), class:"btn btn-block #{post_btn_color("published")}" %>
             </div>
             <div class="col-4 px-0">
-                <%= link_to "編集中", admin_posts_path(post_filter: "unpublished"), class:"btn btn-block #{post_btn_color("unpublished")}" %>
+                <%= link_to "編集中", admin_notices_path(post_filter: "unpublished"), class:"btn btn-block #{post_btn_color("unpublished")}" %>
             </div>
         </div>
     </div>

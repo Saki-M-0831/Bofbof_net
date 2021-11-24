@@ -1,0 +1,70 @@
+<section class="admin-post-index container text-center pt-5 mb-5">
+    <h1 class="pt-5 title">お知らせリスト</h1>
+    <div class="col-4 ml-auto mt-5 pr-5 mb-2 mr-3">
+        <div class="row">
+            <div class="col-4 px-0">
+                <%= link_to "すべて", admin_notices_path(notice_filter: "all"), class:"btn btn-block #{post_btn_color("all")}" %>
+            </div>
+            <div class="col-4 px-0">
+                <%= link_to "掲載済み", admin_notices_path(notice_filter: "published"), class:"btn btn-block #{post_btn_color("published")}" %>
+            </div>
+            <div class="col-4 px-0">
+                <%= link_to "編集中", admin_notices_path(notice_filter: "unpublished"), class:"btn btn-block #{post_btn_color("unpublished")}" %>
+            </div>
+        </div>
+    </div>
+    <div class="card mx-5">
+        <div class="card-header py-1">
+            <div class="row">
+                <div class="col-3 my-auto">タイトル</div>
+                <div class="col-6 my-auto">内容</div>
+                <div class="col-3 text-right">
+                    <%= link_to "新規", new_admin_notice_path, class: "btn btn-outline-dark bg-color py-1" %>
+                </div>
+            </div>
+        </div>
+        <div class="card-body ">
+            
+        <% if !@notices.any? %>
+            <h4 class="text-muted">まだ投稿がありません。</h4>
+        <% else %>
+            <% @notices.each do |notice| %>
+                <div class="row py-0">
+                    <div class="col-2 my-auto">
+                        <% if notice.to_show == true %>
+                            <span class="orange">掲載済み</span>
+                        <% else %>
+                            <span class="text-muted">編集中...</span>
+                        <% end %>
+                    </div>
+                    <div class="col-3 my-auto">
+                        <%= notice.title %>
+                    </div>
+                    <div class="col-4 my-auto">
+                        <%= notice.content %>
+                    </div>
+                    <div class="col-3 my-auto">
+                        <div class="row">
+                            <div class="col-6">
+                                <%= link_to "編集", edit_admin_notice_path(notice), class: "btn btn-outline-dark bg-color py-0 btn-block" %>
+                            </div>
+                            <div class="col-6">
+                                <%= button_to "削除", admin_notice_path(notice), method: :delete, data: {confirm: "本当にこの投稿を削除しますか?"}, class: "btn btn-outline-dark py-0 btn-block" %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            <% end %>
+        <% end %>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 mx-auto px-auto mt-5">
+            <div class="put-center">
+                <%= will_paginate @posts %>
+            </div>
+        </div>
+    </div>
+</section>
