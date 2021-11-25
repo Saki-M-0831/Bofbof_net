@@ -38,7 +38,15 @@ Rails.application.routes.draw do
       end
     end
 
+    resources :notices, only: [:index, :new, :create, :edit, :update, :destroy] do
+      member do
+        patch "publicate"
+        patch "withdraw"
+      end
+    end
+
     resources :videos
+    resources :notices
   end
 
   resources :users
