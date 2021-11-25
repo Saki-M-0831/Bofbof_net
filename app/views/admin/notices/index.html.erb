@@ -22,11 +22,11 @@
                     <%= link_to "新規", new_admin_notice_path, class: "btn btn-outline-dark py-1 bg-color mb-1" %>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-3 col-md-2 my-auto text-left pl-4">ステータス</div>
-                <div class="col-2 col-md-2 my-auto">タイトル</div>
-                <div class="col-3 col-md-3 my-auto">内容</div>
-                <div class="col-3 col-md-5 my-auto">zoomなどのリンク</div>
+            <div class="row justify-content-center">
+                <div class="col-6 col-md-2 my-auto pl-4">ステータス</div>
+                <div class="col-6 col-md-2 my-auto">タイトル</div>
+                <div class="col-12 col-md-5 my-auto">内容</div>
+                <div class="col-6 col-md-3 my-auto">zoomなどのリンク</div>
             </div>
         </div>
         <div class="card-body">   
@@ -34,23 +34,25 @@
                 <h4 class="text-muted">まだ投稿がありません。</h4>
             <% else %>
                 <% @notices.each do |notice| %>
-                    <div class="row py-0">
-                        <div class="col-12 col-md-2 my-auto">
+                    <div class="row justify-content-center py-0">
+                        <div class="col-6 col-md-2 my-auto">
                             <% if notice.to_show == true %>
                                 <span class="orange">掲載済み</span>
                             <% else %>
                                 <span class="text-muted">編集中...</span>
                             <% end %>
                         </div>
-                        <div class="col-2 col-md-2 my-auto">
+                        <div class="col-6 col-md-2 my-auto">
                             <%= notice.title %>
                         </div>
-                        <div class="col-3 col-md-3 my-auto">
+                        <div class="col-12 col-md-5 my-auto">
                             <%= notice.content %>
                         </div>
-                        <%= link_to "#{notice.link}", class: "col-7 col-md-5 text-dark font-weight-bold", target: :_blank do %>
-                            <%= notice.link %><br>
-                        <% end %>
+                        <div class="col-6 col-md-3 my-auto">
+                            <%= link_to "#{notice.link}", class: "col-7 col-md-5 text-dark font-weight-bold", target: :_blank do %>
+                                <%= notice.link %><br>
+                            <% end %>
+                        </div>
                         <div class="col-6 col-md-4 ml-auto my-auto">
                             <div class="row pt-2">
                                 <div class="col-6">
