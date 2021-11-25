@@ -7,25 +7,25 @@
         <div id="carouselExampleIndicators" class="carousel slide mx-5" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <%= image_tag "slide-image1.png", class: "" %>
+                    <%= image_tag "slide-image1.png", class: "w-100" %>
                 </div>
                 <div class="carousel-item">
-                    <%= image_tag "slide-image2.png", class: "" %>
+                    <%= image_tag "slide-image2.png", class: "w-100" %>
                 </div>
                 <div class="carousel-item">
-                    <%= image_tag "slide-image3.png", class: "" %>
+                    <%= image_tag "slide-image3.png", class: "w-100" %>
                 </div>
             </div>
         </div>
         <%# carousel end %>
-        <span class="pages-title">BOFBOF NET</span>
+        <span class="pages-title my-auto">BOFBOF NET</span>
     </section>
     <%# index section end %>
     <%# bof-why section %>
         <section class="bof-why">
         <div class="container bg-light mb-5 p-5 shadow">
             <div class="content text-center ">
-                <h1 class="section-title display-4 mb-5 p-4">BOFBOF NETとは？？</h1>
+                <h1 class="section-title mb-5 p-4">BOFBOF NETとは？？</h1>
                 <%= image_tag "about_us1.jpeg", class: "img-fluid" %>
                 <div class="row my-5 shadow">
                     <div class="col-6 pl-5 my-auto">
@@ -53,9 +53,9 @@
     <section class="bof-activites">
         <div class="container mb-5 p-5 bg-white">
                 <div class="content text-center ">
-                    <h1 class="section-title display-4 pb-3 mb-5">BOFBOFの活動</h1>
+                    <h1 class="section-title pb-3 mb-5">BOFBOFの活動</h1>
                     <p class="mt-3">
-                        インスタグラム、ディスコード、YouTubeなどのSNSを活用し、<br>
+                        インスタ、ディスコード、YouTubeなどのSNSを活用し、<br>
                         みんなで新聞・気になるニュースを共有して活動しています。<br>
                         オンラインでの活動により、全国どこからでも参加できる！<br>
                         現メンバーも複数の大学からの生徒が集まります。<br>
@@ -73,8 +73,8 @@
     </section>
     <section class="container mt-5 mb-5">
         <div class="row text-center">
-            <div class="col-4 bg-white text-black px-5 py-5">
-                <h2 class="my-5 about-platforms-title">インスタグラム<i class="fab fa-instagram"></i></h2>
+            <div class="col-12 col-md-4 bg-white text-black px-5 py-5">
+                <h2 class="my-5 about-platforms-title pb-3">インスタグラム<i class="fab fa-instagram"></i></h2>
                 <span class="bof-activity my-auto">
                 私たちの活動のメイン！！<br>
                 毎日のニュースや活動報告などを見やすくお届け！
@@ -82,10 +82,9 @@
                 <div class="shadow my-3">
                     <%= image_tag "bof_insta.png", class: "w-100" %>
                 </div>
-               
             </div>
-            <div class="col-4 bg-color text-white px-5 py-5">
-                <h2 class="my-5 about-platforms-title">ディスコード<i class="fab fa-discord"></i></h2>
+            <div class="col-12 col-md-4 bg-color text-white px-5 py-5">
+                <h2 class="my-5 about-platforms-title pb-3">ディスコード<i class="fab fa-discord"></i></h2>
                 <span class="bof-activity my-auto">
                 メンバーが集まって勉強会を開いています。<br>
                 ディスカッション方式で、話題のニュースなどについて意見交換！<br>
@@ -94,8 +93,8 @@
                     <%= image_tag "bof_discord.png", class: "w-100" %>
                 </div>
             </div>
-            <div class="col-4 bg-white text-black px-5 py-5">
-                <h2 class="my-5 about-platforms-title">YouTube<i class="fab fa-youtube"></i></h2>
+            <div class="col-12 col-md-4 bg-white text-black px-5 py-5">
+                <h2 class="my-5 about-platforms-title pb-3">YouTube<i class="fab fa-youtube"></i></h2>
                 <span class="bof-activity my-auto">
                 若い世代が知るべきニュースをピックアップして<br>
                 わかりやすく動画解説しています！
@@ -109,7 +108,7 @@
     <section class="bof-notices">
         <div class="container mb-5 p-5 bg-dark text-white">
                 <div class="content text-center">
-                    <h1 class="section-title display-4 pb-3 mb-5 text-white">BOFBOFのイベント・ニュース</h1>
+                    <h1 class="section-title pb-3 mb-5 text-white">BOFBOFのイベント・ニュース</h1>
                     <p class="mt-3">
 
                     </p>
@@ -119,12 +118,12 @@
     <section class="bof-join">
         <div class="container mb-5 p-5 bg-color text-white">
                 <div class="content text-center" id="contact">
-                    <h1 class="section-title display-4 pb-3 mb-5">BOFBOFに興味がおありの<br>そこのあなたへ</h1>
+                    <h1 class="section-title pb-3 mb-5">BOFBOFに興味がおありの<br>そこのあなたへ</h1>
                     <p class="my-3">
                         少しでも興味がそそられたら気軽にご連絡ください！！<br>
                         次のフォームから質問を送るもよし、<br>
                         インスタのDMからのご連絡もお待ちしております！！<br>
-                        <small>※質問はBOFBNOF NET自体のことでも、説明会のことでもなんでもありです！！</small>
+                        <small>※質問はBOFBNOF NET自体のことや、説明会のことなどなんでも！</small>
                     </p>
                     <%= render "form_contact" %>
                     <p><small>※ご返信は上記のメールアドレスに送らせていただきます。</small></p>
@@ -134,10 +133,10 @@
     <section class="bof-members">
         <div class="container mb-5 p-5 bg-white">
                 <div class="content text-center">
-                    <h1 class="section-title display-4 pb-3 mb-5">BOFBOFのメンバーたち</h1>
+                    <h1 class="section-title pb-3 mb-5">BOFBOFのメンバーたち</h1>
                     <div class="row mx-5">
                         <% @users.each do |user| %>
-                            <div class="col-3">
+                            <div class="col-6 col-md-3">
                                 <div class="bg-white p-4 mx-1">
                                     <%= link_to user_path(user) do %>
                                         <% if user.picture? %>
@@ -153,16 +152,18 @@
                                     <% else %>
                                         
                                     <% end %>
-                                    <%= link_to user.name, user_path(user), class: "text-dark font-weight-bold" %><br>
+                                    <p><%= link_to user.name, user_path(user), class: "text-dark font-weight-bold" %></p>
                                 </div>
                             </div>
                         <% end %>
                     </div>
-                    <div class="row">
-                        <div class="col-6 mx-auto px-auto mt-5">
-                            <div class="put-center"><%= will_paginate @users %></div>
+                    <% if @users.count > 4 %>
+                        <div class="row">
+                            <div class="col-6 mx-auto px-auto mt-5">
+                                <div class="put-center"><%= will_paginate @users %></div>
+                            </div>
                         </div>
-                    </div>
+                    <% end %>
                     <p class="text-right">
                         <%= link_to "メンバーをチェック", users_path, class:"orange" %>
                     </p>

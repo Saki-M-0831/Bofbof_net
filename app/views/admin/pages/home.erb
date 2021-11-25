@@ -1,8 +1,8 @@
 <section class="admin-home container text-center pt-5">
-    <h1 class="mb-5 pt-5 title">管理メンバー<br>ホーム</h1>
+    <h1 class="my-5 pt-5 title">管理メンバー<br>ホーム</h1>
     <div class="px-5 mt-5">
-        <div class="row mb-4">
-            <div class="col-4">
+        <div class="row justify-content-center mb-4">
+            <div class="col-12 col-md-4 col-md-4 mb-3">
                 <%= link_to admin_users_index_path, class: "text-dark link" do %>
                     <div class="card card-body shadow hover">
                         <h3>メンバーリスト</h3>
@@ -10,7 +10,7 @@
                     </div>
                 <% end %>
             </div>
-            <div class="col-4">
+            <div class="col-12 col-md-4 mb-3">
                 <%= link_to admin_posts_path, class: "text-dark link" do %>
                     <div class="card card-body shadow hover">
                         <h3>投稿作成・編集</h3>
@@ -18,7 +18,7 @@
                     </div>
                 <% end %>
             </div>
-            <div class="col-4">
+            <div class="col-12 col-md-4 mb-3">
                 <%= link_to admin_videos_path, class: "text-dark link" do %>
                     <div class="card card-body shadow hover">
                         <h3>動画掲示板</h3>
@@ -26,9 +26,7 @@
                     </div>
                 <% end %>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-4 ml-auto">
+            <div class="col-12 col-md-4 mb-3 ml-auto">
                 <%= link_to admin_contacts_index_path, class: "text-dark link" do %>
                     <div class="card card-body shadow hover">
                         <h3>質問管理</h3>
@@ -36,7 +34,7 @@
                     </div>
                 <% end %>
             </div>
-            <div class="col-4 mr-auto mb-5">
+            <div class="col-12 col-md-4 mb-3 mr-auto mb-5">
                 <%= link_to admin_users_index_path, class: "text-dark link" do %>
                     <div class="card card-body shadow hover">
                         <h3>お知らせ管理</h3>

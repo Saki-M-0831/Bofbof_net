@@ -1,25 +1,26 @@
 <section class="admin-users container text-center pt-5 mb-5">
-    <h1 class="pt-5 title">メンバーリスト</h1>
-    <div class="col-4 ml-auto mt-5 pr-5 mb-2 mr-3">
-        <div class="row">
-            <div class="col-4 px-0">
-                <%= link_to "すべて", admin_users_index_path(user_filter: "all"), class:"btn btn-block #{btn_color("all")}" %>
-            </div>
-            <div class="col-4 px-0">
-                <%= link_to "管理者", admin_users_index_path(user_filter: "admin"), class:"btn btn-block #{btn_color("admin")}" %>
-            </div>
-            <div class="col-4 px-0">
-                <%= link_to "非管理者", admin_users_index_path(user_filter: "non-admin"), class:"btn btn-block #{btn_color("non-admin")}" %>
+    <h1 class="pt-5 mt-5 title">メンバーリスト</h1>
+    <div class="row mx-3">
+        <div class="col-12 col-md-4 mt-5 mb-2 px-5">
+            <div class="row justify-content-center">
+                <div class="col-4 px-0">
+                    <%= link_to "すべて", admin_users_index_path(user_filter: "all"), class:"btn btn-block #{btn_color("all")}" %>
+                </div>
+                <div class="col-4 px-0">
+                    <%= link_to "管理者", admin_users_index_path(user_filter: "admin"), class:"btn btn-block #{btn_color("admin")}" %>
+                </div>
+                <div class="col-4 px-0">
+                    <%= link_to "非管理者", admin_users_index_path(user_filter: "non-admin"), class:"btn btn-block #{btn_color("non-admin")}" %>
+                </div>
             </div>
         </div>
     </div>
     <div class="card mx-5">
         <div class="card-header py-1">
             <div class="row">
-                <div class="col-2">名前</div>
-                <div class="col-4">Eメール</div>
-                <div class="col-3">大学</div>
-                <div class="col-3"></div>
+                <div class="col-4 col-md-2">名前</div>
+                <div class="col-4 col-md-4">Eメール</div>
+                <div class="col-4 col-md-3">大学</div>
             </div>
         </div>
         <div class="card-body ">
@@ -28,19 +29,19 @@
             <% else %>
                 <% @users.each do |user| %>
                     <div class="row py-0">
-                        <div class="col-2 my-auto">
+                        <div class="col-4 col-md-2 my-auto">
                             <% if user.is_admin == true %>
                                 <small class="ml-auto"><span class="badge badge-pill remove-btn">管理者</span></small><br>
                             <% end %>
                             <span class="<%= admin_user(user) %>"><%= link_to user.name, user_path(user) %></span>
                         </div>
-                        <div class="col-4 my-auto">
+                        <div class="col-4 col-md-4 my-auto">
                             <%= user.email %>
                         </div>
-                        <div class="col-3 my-auto">
+                        <div class="col-4 col-md-3 my-auto">
                             <%= user.uni %>
                         </div>
-                        <div class="col-3 my-auto">
+                        <div class="col-4 col-md-3 my-auto ml-auto">
                             <% if user.is_admin == true %>
                                 <%= button_to "管理者解除", remove_admin_admin_user_path(user), method: :patch, class: "btn btn-outline-dark" %>
                             <% else %>
