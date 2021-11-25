@@ -2,11 +2,15 @@
     <div class="row mx-5">
         <div class="col-12 col-md-6 my-auto pb-2">
             <%= n.label :title, "タイトル" %>
-            <%= n.text_field :title, placeholder: "例: 11月の説明会のお知らせ", class: "form-control", required: true %>
+            <%= n.text_field :title, placeholder: "例: 0月0日の説明会のお知らせ", class: "form-control", required: true %>
         </div>
         <div class="col-12 col-md-6 my-auto pb-2">
             <%= n.label :content, "内容" %>
-            <%= n.text_area :content, placeholder:"今月は土曜日・日曜日に説明会を開催します。リンクはこちら＜...＞", class: "form-control" %>
+            <%= n.text_area :content, placeholder:"0月0日に説明会を行います", class: "form-control" %>
+        </div>
+        <div class="col-12 col-md-6 my-auto pb-2">
+            <%= n.label :link, "zoomなどのURL" %>
+            <%= n.text_field :link, class: "form-control", require: true %>
         </div>
         <%= n.submit "保存する", class: "btn btn-outline-dark bg-color put-center mt-4" %>
     </div>

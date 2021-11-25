@@ -26,6 +26,10 @@ class Admin::NoticesController < ApplicationController
     end
   end
 
+  def show
+
+  end
+  
   def edit
     @notice = Notice.find(params[:id])
   end
@@ -65,7 +69,7 @@ class Admin::NoticesController < ApplicationController
 
   private
   def notice_params
-    params.require(:notice).permit(:title, :content, :to_show)
+    params.require(:notice).permit(:title, :content, :to_show, :link)
   end
 
 end

@@ -112,7 +112,7 @@
                     <div class="mt-3 mx-5">
                         <hr>
                         <% @notices.each do |notice| %>
-                            <p><%= notice.title  %></p>
+                            <p><%= link_to "#{notice.title}", notice_path(notice) %></p>
                             <hr>
                         <% end %>
                     </div>
