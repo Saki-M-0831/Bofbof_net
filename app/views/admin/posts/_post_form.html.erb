@@ -1,10 +1,10 @@
 <%= form_for([:admin, @post]) do |f| %>
     <div class="row mx-5">
-        <div class="col-6 my-auto">
+        <div class="col-12 col-md-6 my-auto pb-2">
             <%= f.label :title, "タイトル" %>
             <%= f.text_field :title, placeholder: "例: 1月1日のニュース", class: "form-control", required: true %>
         </div>
-        <div class="col-6 my-auto">
+        <div class="col-12 col-md-6 my-auto pb-2">
             <%= f.label :description, "概要・メモ" %>
             <%= f.text_area :description, class: "form-control" %>
         </div>

@@ -1,12 +1,12 @@
 <%= form_for([:admin, @notice]) do |n| %>
     <div class="row mx-5">
-        <div class="col-6 my-auto">
+        <div class="col-12 col-md-6 my-auto pb-2">
             <%= n.label :title, "タイトル" %>
             <%= n.text_field :title, placeholder: "例: 11月の説明会のお知らせ", class: "form-control", required: true %>
         </div>
-        <div class="col-6 my-auto">
-            <%= n.label :content, "今月は土曜日・日曜日に説明会を開催します。リンクはこちら＜...＞" %>
-            <%= n.text_area :content, class: "form-control" %>
+        <div class="col-12 col-md-6 my-auto pb-2">
+            <%= n.label :content, "内容" %>
+            <%= n.text_area :content, placeholder:"今月は土曜日・日曜日に説明会を開催します。リンクはこちら＜...＞", class: "form-control" %>
         </div>
         <%= n.submit "保存する", class: "btn btn-outline-dark bg-color put-center mt-4" %>
     </div>
