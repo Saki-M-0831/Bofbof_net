@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'notices/index'
+  get 'notices/show'
   root 'pages#home'
   get '/about', to: "pages#about"
 
@@ -53,6 +55,7 @@ Rails.application.routes.draw do
   resources :videos, only: [:index]
   resources :posts, only: [:index]
   resources :contacts, only: [:create]
+  resources :notices, only: [:index, :show]
 
   namespace :likes do
     post 'comment_like'

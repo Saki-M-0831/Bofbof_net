@@ -23,9 +23,10 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 col-md-2 my-auto text-left pl-4">ステータス</div>
-                <div class="col-4 col-md-3 my-auto">タイトル</div>
-                <div class="col-8 col-md-7 my-auto">内容</div>
+                <div class="col-3 col-md-2 my-auto text-left pl-4">ステータス</div>
+                <div class="col-2 col-md-2 my-auto">タイトル</div>
+                <div class="col-3 col-md-3 my-auto">内容</div>
+                <div class="col-3 col-md-5 my-auto">zoomなどのリンク</div>
             </div>
         </div>
         <div class="card-body">   
@@ -41,12 +42,15 @@
                                 <span class="text-muted">編集中...</span>
                             <% end %>
                         </div>
-                        <div class="col-4 col-md-3 my-auto">
+                        <div class="col-2 col-md-2 my-auto">
                             <%= notice.title %>
                         </div>
-                        <div class="col-8 col-md-7 my-auto">
+                        <div class="col-3 col-md-3 my-auto">
                             <%= notice.content %>
                         </div>
+                        <%= link_to "#{notice.link}", class: "col-7 col-md-5 text-dark font-weight-bold", target: :_blank do %>
+                            <%= notice.link %><br>
+                        <% end %>
                         <div class="col-6 col-md-4 ml-auto my-auto">
                             <div class="row pt-2">
                                 <div class="col-6">
