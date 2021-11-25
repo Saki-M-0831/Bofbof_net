@@ -109,17 +109,13 @@
         <div class="container mb-5 p-5 bg-dark text-white">
                 <div class="content text-center">
                     <h1 class="section-title pb-3 mb-5 text-white">BOFBOFのイベント・ニュース</h1>
-                    <p class="mt-3">
+                    <div class="mt-3 mx-5">
+                        <hr>
                         <% @notices.each do |notice| %>
+                            <p><%= notice.title  %></p>
                             <hr>
-                            <div class="row">
-                                <div class="col">
-                                    <%= notice.title  %>
-                                    <hr>
-                                </div>
-                            </div>
                         <% end %>
-                    </p>
+                    </div>
                 </div>
             </div>
     </section>
