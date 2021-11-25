@@ -34,8 +34,9 @@ class Admin::NoticesController < ApplicationController
     @notice = Notice.find(params[:id])
     @notice.update(notice_params)
 
-    redirect_back(fallback_location: request.referer)
     flash[:success] = "お知らせを編集しました！"
+    
+    redirect_to admin_notices_url
   end
 
   def destroy

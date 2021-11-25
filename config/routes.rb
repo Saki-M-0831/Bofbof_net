@@ -46,7 +46,6 @@ Rails.application.routes.draw do
     end
 
     resources :videos
-    resources :notices
   end
 
   resources :users
