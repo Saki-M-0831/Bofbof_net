@@ -1,40 +1,37 @@
 <%# Wrapping it all up %>
-<div class="about-wrap">
+<div class="pages-wrap">
     <%# index section %>
     <%# Here comes a sliding image or something %>
-    <section class="about-index">
+    <section class="pages-index">
         <%# Here comes the carousel %>
         <div id="carouselExampleIndicators" class="carousel slide mx-5" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <%= image_tag "slide-image1.png", class: "" %>
+                    <%= image_tag "slide-image1.png", class: "w-100" %>
                 </div>
                 <div class="carousel-item">
-                    <%= image_tag "slide-image2.png", class: "" %>
+                    <%= image_tag "slide-image2.png", class: "w-100" %>
                 </div>
                 <div class="carousel-item">
-                    <%= image_tag "slide-image3.png", class: "" %>
+                    <%= image_tag "slide-image3.png", class: "w-100" %>
                 </div>
             </div>
         </div>
         <%# carousel end %>
-        <span class="about-title">BOFBOF NET</span>
+        <span class="pages-title">BOFBOF NET</span>
     </section>
     <%# index section end %>
     <%# section %>
     <section class="mission">
         <div class="container mb-5 p-5">
                 <div class="content text-center ">
-                    <h1 class="section-title display-4 pb-3 mb-5">BOFBOFの理念</h1>
-                    <p class="mt-3">知識は武器だ。
-                    <br>
-                    世の中と大学生をもっと近く。
-                    <br>
-                    世界を見る目をもっと広く。
-                    <br>
-                    知りたいは宝だ。知識は共有するべきだ。
+                    <h1 class="section-title pb-3 mb-5">BOFBOFの理念</h1>
+                    <p class="mt-3">
+                    知識は武器だ。<br>
+                    世の中と大学生をもっと近く。<br>
+                    世界を見る目をもっと広く。<br>
+                    知りたいは宝だ。知識は共有するべきだ。<br>
                     </p>
-                    <br>
                 </div>
             </div>
     </section>
@@ -43,7 +40,7 @@
     <section class="bof-why">
         <div class="container bg-light mb-5 p-5">
             <div class="content text-center px-5">
-                <h1 class="section-title display-4 mb-2 p-4">なぜ?「BOFBOF」</h1>
+                <h1 class="section-title mb-2 p-4">なぜ?「BOFBOF」</h1>
                 <p class="pb-5">BOFの由来</p>
                 <%= image_tag "about_us1.jpeg", class: "img-fluid" %>
                 <p class="mt-5 text-left">フランス語でBofとは、無関心を示す「ふうん」といったような意味で使われる言葉です。僕たちは若い世代がニュースに対して「ふうん」と無関心な状態を変えたくてBOFBOF NETという名前をつけました。</p>
@@ -56,18 +53,23 @@
     <section class="bof-issue">
         <div class="container bg-light mb-5 p-5">
             <div class="content text-center ">
-                <h1 class="section-title display-4 mb-2 p-4">Issues</h1>
+                <h1 class="section-title mb-2 p-4">Issues</h1>
                 <p class="pb-5">私たちの問題意識</p>
                 <%= image_tag "about_us2.jpeg", class: "img-fluid" %>
-                <p class="mt-5 text-center orange">無関心をなくしたい。<br>社会と大学生をもっと近く。<br>世界を見る目をもっと広く。<br>知りたいは宝だ。<br>知識は共有するべきだ。</p>
-                <br>
-                <ol class="text-left px-5">
-                    <li>海外の同世代は政治・社会問題について話し合っている人が多いのに、自分たちは少ないことへの危機感</li>
-                    <br>
-                    <li>日々のニュースに触れることで、自分の視野を広げたり、知識を深めたい</li>
-                    <br>
-                    <li>どう思いますか？どんな意見を持っていますか？に弱い自分たちを変えなくてはいけない</li>
-                </ol>
+                <p class="mt-5 text-center orange">
+                無関心をなくしたい。<br>
+                社会と大学生をもっと近く。<br>
+                世界を見る目をもっと広く。<br>
+                知りたいは宝だ。<br>
+                知識は共有するべきだ。<br>
+                </p>
+                <p>
+                    <ol class="text-left px-5">
+                        <li>海外の同世代は政治・社会問題について話し合っている人が多いのに、自分たちは少ないことへの危機感</li><br>
+                        <li>日々のニュースに触れることで、自分の視野を広げたり、知識を深めたい</li><br>
+                        <li>どう思いますか？どんな意見を持っていますか？に弱い自分たちを変えなくてはいけない</li>
+                    </ol>
+                </p>
             </div>
         </div>
     </section>
@@ -76,16 +78,52 @@
     <section class="bof-vision">
         <div class="container bg-light mb-5 p-5">
             <div class="content text-center ">
-                <h1 class="section-title display-4 mb-2 p-4">VISION</h1>
+                <h1 class="section-title mb-2 p-4">VISION</h1>
                 <p class="pb-5">私たちがすること</p>
                 <%= image_tag "about_us3.jpeg", class: "img-fluid" %>
-                <p class="mt-5 px-5">若者が新聞を読むことへのきっかけ作りと、<br>みんなの”知りたい”を繋げる場所を提供します</p>
+                <p class="mt-5 px-5">若者が新聞を読むことへのきっかけ作りと、<br>みんなの”知りたい”を繋げる場所を提供します。</p>
                 <br>
+            </div>
+        </div>
+    </section>
+    <section class="">
+        <div class="container bg-color mb-5 p-5">
+            <div class="content text-center text-white">
+                <p class="px-5">
+                <span class="text-dark">「ニュースは知っておきたい、<br>
+                でも独りじゃあ続かないし大変かも。」</span><br>
+                そんな人にこそ入ってほしい、みんなで情報・知識を集め共有し、自分の視野も広げられるBOFBOF NET。</p>
             </div>
         </div>
     </section>
     <%#  section end %>
     <%#  section %>
-    <section class="bof-members"></section>
+    <section class="container mt-5 mb-5">
+        <div class="row text-center">
+            <div class="col-12 col-md-4 bg-white text-black px-5 py-5">
+                <h2 class="my-5 about-platforms-title">インスタグラム<i class="fab fa-instagram"></i></h2>
+                <span class="bof-activity my-auto">
+                BOFBOF NETの活動はインスタグラムがメイン！！<br>
+                毎日のニュース発信や活動報告などをしています！
+                </span>
+            </div>
+            <div class="col-12 col-md-4 bg-color text-white px-5 py-5">
+                <h2 class="my-5 about-platforms-title">ディスコード<i class="fab fa-discord"></i></h2>
+                <span class="bof-activity my-auto">
+                不定期にメンバーが集まって勉強会を開いています。<br>
+                ディスカッション方式で、話題のニュースなどについて意見交換しています！<br>
+                </span>
+            </div>
+            <div class="col-12 col-md-4 bg-white text-black px-5 py-5">
+                <h2 class="my-5 about-platforms-title">YouTube<i class="fab fa-youtube"></i></h2>
+                
+                <span class="bof-activity my-auto">
+                ニュースを読まない若者をターゲットに、<br>
+                若い世代が知るべきニュースをピックアップ！！<br>
+                わかりやすく動画解説しています！
+                </span>
+            </div>
+        </div>
+    </section>
     <%#  section end %>
 </div>

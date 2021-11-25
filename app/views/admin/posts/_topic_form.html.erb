@@ -1,11 +1,11 @@
 <div class="row mx-5 mt-4">
-    <div class="col-3 my-auto">
+    <div class="col-12 col-md-3 my-auto">
         <div class="division-pic shadow" id="dtopic"><h2><i class="fas fa-mountain"></i>国内</h2></div>
     </div>
-    <div class="col-7 my-auto">
+    <div class="col-12 col-md-7 my-auto">
         <% @d_topics.each do |d| %>
-            <div class="row">
-                <div class="col-10 my-auto text-left">
+            <div class="row py-3">
+                <div class="col-12 col-md-10 my-auto text-left">
                     <%= d.content %>
                     <% if d.is_chosen == false || d.is_chosen.nil? %>
                         <%= link_to d_choose_admin_post_dtopic_path(dtopic_id: d.id, post_id: @post.id), method: :patch do %>
@@ -23,11 +23,11 @@
             </div>
         <% end %>
         <%= form_for([:admin, @post, @d_topic]) do |f| %>
-            <div class="row mt-2">
-                <div class="col-10 my-auto">
+            <div class="row">
+                <div class="col-12 col-md-10 my-auto">
                     <%= f.text_field :content, placeholder:"国内ニュースを書き込む", class: "form-control", required: true %>
                 </div>
-                <div class="col-2 my-auto pl-0">
+                <div class="col-12 col-md-2 my-auto pl-0">
                     <%= f.submit "追加する", class: "btn btn-outline-dark" %>
                 </div>
             </div>
@@ -35,13 +35,13 @@
     </div>
 </div>
 <div class="row mx-5 mt-5">
-    <div class="col-3 my-auto">
+    <div class="col-12 col-md-3 my-auto pt-3">
         <div class="division-pic shadow"><h2><i class="fas fa-globe-asia"></i>国際</h2></div>
     </div>
-    <div class="col-7 my-auto">
+    <div class="col-12 col-md-7 my-auto">
         <% @i_topics.each do |i| %>
-            <div class="row">
-                <div class="col-10 my-auto text-left">
+            <div class="row py-3">
+                <div class="col-12 col-md-10 my-auto text-left">
                     <%= i.content %>
                     <% if i.is_chosen == false || i.is_chosen.nil? %>
                         <%= link_to i_choose_admin_post_itopic_path(itopic_id: i.id, post_id: @post.id), method: :patch do %>
@@ -59,11 +59,11 @@
             </div>
         <% end %>
         <%= form_for([:admin, @post, @i_topic]) do |f| %>
-            <div class="row mt-2">
-                <div class="col-10 my-auto">
+            <div class="row mb-4">
+                <div class="col-12 col-md-10 my-auto">
                     <%= f.text_field :content, placeholder:"国際ニュースを書き込む", class: "form-control", required: true %>
                 </div>
-                <div class="col-2 my-auto pl-0">
+                <div class="col-12 col-md-2 my-auto pl-0">
                     <%= f.submit "追加する", class: "btn btn-outline-dark" %>
                 </div>
             </div>

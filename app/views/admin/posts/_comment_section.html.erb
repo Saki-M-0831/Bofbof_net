@@ -1,6 +1,6 @@
 <h5 class="text-center mb-4" id="comment">コメント</h5>
 <% @comments.each do |c| %>
-    <div class="row mx-5">
+    <div class="row">
         <div class="col-1 text-right mr-0 pr-0 mt-2">
             <% if c.user.picture? %>
                 <%= image_tag c.user.picture.url, class: "rounded-circle", :size => "30x30" %>
@@ -8,7 +8,7 @@
                 <%= image_tag gravatar_for(c.user), class: "rounded-circle", :size => "30x30" %>
             <% end %> 
         </div>
-        <div class="col-6 text-left ml-0 mr-0">
+        <div class="col-8 col-md-6 text-left ml-0 mr-0">
             <small class="text-muted"><%= c.user.name %></small><br>
             <span class="comment-content shadow"><%= c.content %></span>
             <% if c.user == current_user %>
@@ -32,7 +32,7 @@
     </div>
 <% end %>
 <%= form_for([:admin, @post, @comment]) do |f| %>
-    <div class="row mt-4 mx-5">
+    <div class="row mt-4">
         <div class="col-1 text-right mr-0 pr-0 mt-1">
             <% if current_user.picture? %>
                 <%= image_tag current_user.picture.url, class: "rounded-circle", :size => "30x30" %>
@@ -40,11 +40,11 @@
                 <%= image_tag gravatar_for(current_user), class: "rounded-circle", :size => "30x30" %>
             <% end %> 
         </div>
-        <div class="col-6">
-            <%= f.text_field :content, class: "form-control" %>
+        <div class="col-8 col-md-6">
+            <%= f.text_area :content, class: "form-control" %>
             <%= f.hidden_field :user_id, value: current_user.id %>
         </div>
-        <div class="col-2 text-left ml-0 pl-0">
+        <div class="col-1 text-left ml-0 mt-auto pl-0">
             <%= f.submit "送信", class: "btn btn-outline-dark" %>
         </div>
     </div>

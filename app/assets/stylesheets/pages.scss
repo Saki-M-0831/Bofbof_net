@@ -133,7 +133,7 @@
 .menu-wrap .menu > div > div > ul > li {
   list-style: none;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 3vw;
   padding: 1rem;
 }
 .menu-wrap .menu > div > div > ul > li > a {
@@ -226,35 +226,27 @@
   color: #1DA1F2;
 }
 // Code for large letters on carousel
-.about-title {
+.pages-title {
   position: absolute;
-  top: 2em;
-  left: 1em;
-  font-size: 10em;
-  text-decoration: none;
-  color: white;
-}
-
-.home-title {
-  position: absolute;
-  top: 2em;
-  left: 1em;
-  font-size: 10em;
+  top: 20vw;
+  left: 12vw;
+  font-size: 11vw;
   text-decoration: none;
   color: white;
 }
 
 .section-title {
+  font-size: 5vw;
   border-bottom: 4px solid;
   color: black;
 }
 
-.about-wrap {
+.pages-wrap {
   font-weight: bold;
 }
 
-.about-wrap p {
-  font-size: 2em;
+.pages-wrap p {
+  font-size: 2.5vw;
   line-height: 2;
 }
 
@@ -308,7 +300,6 @@
 .bof-issue li {
   text-indent: -1.3em;
   padding-left: 1.3em;
-  font-size: 2em;
 }
 .bof-issue li:before {
   counter-increment: item;
@@ -338,4 +329,11 @@
 .back-button:hover{
   background-color: var(--primary-color);
   color: white;
+}
+.about-platforms-title {
+  font-size: 2em;
+  border-bottom: 4px solid;
+}
+.contact-form{
+  border: 2px solid black;
 }

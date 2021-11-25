@@ -1,15 +1,17 @@
 <section class="admin-video-index container text-center pt-5 mb-5">
-    <h1 class="pt-5 title">YouTube動画リスト</h1>
+    <h1 class="pt-5 mt-5 title">YouTube動画リスト</h1>
     <div class="card mt-5 mx-5">
         <div class="card-header py-1">
             <div class="row">
-                <div class="col-3 my-auto">サムネ</div>
-                <div class="col-2 my-auto">タイトル</div>
-                <div class="col-3 my-auto">リンク</div>
-                <div class="col-2 my-auto">概要</div>
-                <div class="col-2 text-right mx-0 p-0">
+                <div class="col-4 col-md-2 text-right ml-auto">
                     <%= link_to "新規", new_admin_video_path, class: "btn btn-outline-dark bg-color py-0 my-1" %>
                 </div>
+            </div>
+            <div class="row">
+                <div class="col-6 col-md-4 my-auto">サムネ</div>
+                <div class="col-6 col-md-2 my-auto">タイトル</div>
+                <div class="col-6 col-md-3 my-auto">リンク</div>
+                <div class="col-6 col-md-3 my-auto">概要</div>
             </div>
         </div>
         <div class="card-body ">
@@ -18,19 +20,19 @@
             <% else %>
                 <% @videos.each do |video| %>
                     <div class="row">
-                        <div class="col-3 my-auto">
+                        <div class="col-6 col-md-4 my-auto">
                             <%= image_tag video.picture.url, class: "w-100" %>
                         </div>
-                        <div class="col-2 my-auto">
+                        <div class="col-6 col-md-2 my-auto">
                             <%= video.title %>
                         </div>
-                        <div class="col-3 my-auto">
+                        <div class="col-6 col-md-3 my-auto">
                             <%= link_to video.link, target: :_blank %>
                         </div>
-                        <div class="col-2 my-auto">
+                        <div class="col-6 col-md-3 my-auto">
                             <%= video.content %>
                         </div>
-                        <div class="col-2 text-left my-auto">
+                        <div class="col-6 col-md-2 text-left ml-auto my-auto">
                             <%= link_to "変更", edit_admin_video_path(video), class: "btn btn-outline-dark py-1" %>
                             <%= link_to "削除", admin_video_path(video), method: :delete, data: {confirm: "本当にこの動画情報を削除しますか?"}, class: "btn btn-outline-dark py-1" %>
                         </div>

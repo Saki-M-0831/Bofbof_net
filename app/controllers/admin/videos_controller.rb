@@ -14,7 +14,7 @@ class Admin::VideosController < ApplicationController
 
       redirect_to admin_videos_url
     else 
-      flash[:danger] = "動画情報をアップできませんでした。もう一度試してください！"
+      flash[:error] = "動画情報をアップできませんでした。もう一度試してください！"
 
       redirect_back(fallback_location: request.referer)
     end
@@ -31,7 +31,7 @@ class Admin::VideosController < ApplicationController
 
       redirect_to admin_videos_url
     else
-      flash[:danger] = "動画情報を変更できませんでした。もう一度試してください！"
+      flash[:error] = "動画情報を変更できませんでした。もう一度試してください！"
 
       redirect_back(fallback_location: request.referer)
     end
@@ -42,7 +42,7 @@ class Admin::VideosController < ApplicationController
     if @video.destroy
       flash[:success] = "動画投稿を削除しました！"
     else
-      flash[:danger] = "削除に失敗しました。"
+      flash[:error] = "削除に失敗しました。"
     end
     redirect_back(fallback_location: request.referer)
   end

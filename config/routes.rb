@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   namespace :admin do
     get 'pages/home'
     get 'users/index'
+    get 'contacts/index'
+    patch 'contacts/update'
 
     resources :posts, only: [:index, :new, :create, :edit, :update, :destroy] do
       member do
@@ -51,6 +53,7 @@ Rails.application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :videos, only: [:index]
   resources :posts, only: [:index]
+  resources :contacts, only: [:create]
 
   namespace :likes do
     post 'comment_like'

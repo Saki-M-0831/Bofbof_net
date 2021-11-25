@@ -6,10 +6,10 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      flash[:success] = "Yay, You're SignIn Now!!"
+      flash[:success] = "サインインに成功しました！"
       redirect_to root_url
     else
-      flash[:danger] = "Ooops"
+      flash[:error] = "サインインできませんでした。情報をご確認のうえ、もう一度お試しください。"
       render "new"
     end
   end
