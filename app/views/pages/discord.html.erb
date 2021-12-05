@@ -1,0 +1,39 @@
+<section class="notice-title">
+    <div class="container mt-5 mb-3 p-5 bg-color text-white">
+            <div class="content text-center" id="contact">
+                <h1 class="section-title">
+                    BOFBOF NETのディスコードに<br>ご興味がある方
+                </h1>
+            </div>
+        </div>
+</section>
+<section class="notice-description">
+    <div class="container mb-5 p-5 bg-white">
+            <div class="content text-center">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="shadow my-3">
+                            <%= image_tag "bof_discord.png", class: "w-100" %>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h4 class="mt-3 px-5">
+                            <span>
+                                参加希望の旨お問い合わせいただけましたら、その都度ディスコードの参加URLを送らせていただきます。<br>
+                                このホームページ上のメッセージ機能をご利用ください。<br>
+                                インスタグラムのDMにてのご連絡も受け付けております。<br>
+                                お気軽にご連絡ください！！
+                            </span>
+                        </h4> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-8 col-md-6 ml-auto">
+                        <p>
+                            <h4><%= link_to "メッセージを送る", {:action => "home", :controller => "pages", :anchor => "contact"}, class: "col-7 col-md-5 orange font-weight-bold" %></h4>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>

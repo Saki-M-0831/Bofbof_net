@@ -27,7 +27,9 @@
                             <%= video.title %>
                         </div>
                         <div class="col-6 col-md-3 my-auto">
-                            <%= link_to video.link, target: :_blank %>
+                            <%= link_to "#{video.link}", target: :_blank do %>
+                                <%= video.link %>
+                            <% end %>
                         </div>
                         <div class="col-6 col-md-3 my-auto">
                             <%= video.content %>

@@ -42,7 +42,7 @@ class Admin::PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.update(post_params)
 
-    redirect_back(fallback_location: request.referer)
+    redirect_to admin_posts_url
   end
 
   def publicate

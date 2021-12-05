@@ -10,7 +10,7 @@ class Admin::ItopicsController < ApplicationController
     else
       flash[:error] = "1つのニュースあたり42文字以下にしてください。"
     end
-    redirect_to edit_admin_post_url(@post, anchor: "topic")
+    redirect_to edit_admin_post_url(@post, anchor: "itopic")
   end
 
   def i_choose
@@ -19,7 +19,7 @@ class Admin::ItopicsController < ApplicationController
     @topic = Itopic.find_by(id: @i)
     @topic.update(is_chosen: true)
 
-    redirect_to edit_admin_post_url(@post, anchor: "topic")
+    redirect_to edit_admin_post_url(@post, anchor: "itopic")
   end
 
   def i_omit
@@ -28,15 +28,16 @@ class Admin::ItopicsController < ApplicationController
     @topic = Itopic.find_by(id: @i)
     @topic.update(is_chosen: false)
 
-    redirect_to edit_admin_post_url(@post, anchor: "topic")
+    redirect_to edit_admin_post_url(@post, anchor: "itopic")
   end
 
   def destroy
+    @post = Post.find(params[:post_id])
     @i = params[:itopic_id]
     @topic = Itopic.find_by(id: @i)
     @topic.destroy
 
-    redirect_to edit_admin_post_url(@post, anchor: "topic")
+    redirect_to edit_admin_post_url(@post, anchor: "itopic")
   end
 
   def itopic_params
