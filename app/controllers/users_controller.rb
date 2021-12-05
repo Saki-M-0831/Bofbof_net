@@ -7,7 +7,9 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:success] = "サインインに成功しました！"
-      redirect_to root_url
+
+
+      redirect_to new_session_url
     else
       flash[:error] = "サインインできませんでした。情報をご確認のうえ、もう一度お試しください。"
       render "new"

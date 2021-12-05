@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'notices/show'
   root 'pages#home'
   get '/about', to: "pages#about"
+  get '/discord', to: "pages#discord"
 
   namespace :admin do
     get 'pages/home'
