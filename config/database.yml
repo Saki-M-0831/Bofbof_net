@@ -50,6 +50,9 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: bofbof_net_production
   username: bofbof_net
   password: <%= ENV['BOFBOF_NET_DATABASE_PASSWORD'] %>
