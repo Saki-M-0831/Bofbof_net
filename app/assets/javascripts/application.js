@@ -19,5 +19,6 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+//= require rails-ujs
 
 import '@fortawesome/fontawesome-free/js/all';
