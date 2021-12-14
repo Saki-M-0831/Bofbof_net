@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require rails-ujs
+//= require jquery-ujs
 //= require jquery3
 //= require jquery-ui/datepicker
 //= require popper
@@ -19,6 +20,5 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
-//= require rails-ujs
 
 import '@fortawesome/fontawesome-free/js/all';
