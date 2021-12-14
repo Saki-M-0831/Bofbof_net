@@ -25,11 +25,11 @@
                             </div>
                             <div class="col-6 col-md-1">
                                 <% if c.have_replied == false || c.have_replied.nil? %>
-                                    <%= link_to admin_contacts_update_path(contact_id: c.id), method: :patch do %>
+                                    <%= button_to admin_contacts_update_path(contact_id: c.id), method: :patch do %>
                                         <span class="text-muted"><i class="fas fa-check"></i></span>
                                     <% end %>
                                 <% else %>
-                                    <%= link_to admin_contacts_update_path(contact_id: c.id), method: :patch do %>
+                                    <%= button_to admin_contacts_update_path(contact_id: c.id), method: :patch do %>
                                         <span class="text-success"><i class="fas fa-check"></i></span>
                                     <% end %>
                                 <% end %>

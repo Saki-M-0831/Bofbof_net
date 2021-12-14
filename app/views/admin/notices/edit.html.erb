@@ -9,9 +9,9 @@
             <hr>
         <div class="mr-5 text-right">
                 <% if @notice.to_show == false %>
-                    <%= link_to "投稿を載せる", publicate_admin_notice_path(@notice), method: :patch, class: "btn btn-outline-dark bg-color put-center mt-4" %>
+                    <%= button_to "投稿を載せる", publicate_admin_notice_path(@notice), method: :patch, class: "btn btn-outline-dark bg-color put-center mt-4" %>
                 <% else %>
-                    <%= link_to "投稿を隠す", withdraw_admin_notice_path(@notice), method: :patch, class: "btn btn-outline-dark put-center mt-4" %>
+                    <%= button_to "投稿を隠す", withdraw_admin_notice_path(@notice), method: :patch, class: "btn btn-outline-dark put-center mt-4" %>
                 <% end %>
             </div>
         </div>
