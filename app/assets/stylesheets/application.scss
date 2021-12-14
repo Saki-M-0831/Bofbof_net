@@ -69,3 +69,21 @@
   border-bottom: 4px solid;
   color: black;
 }
+.btn-inline {
+  display: flex;
+}
+.inline {
+  display: inline;
+}
+.logout {
+  list-style: none;
+  color: #fff;
+  font-size: 3vw;
+  font-weight: bold;
+}
+.logout:hover {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.4s ease;
+  display: inline-block;
+}

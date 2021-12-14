@@ -34,9 +34,9 @@
                         <div class="col-6 col-md-3 my-auto">
                             <%= video.content %>
                         </div>
-                        <div class="col-6 col-md-2 text-left ml-auto my-auto">
+                        <div class="col-6 col-md-2 text-left ml-auto my-auto btn-inline">
                             <%= link_to "変更", edit_admin_video_path(video), class: "btn btn-outline-dark py-1" %>
-                            <%= link_to "削除", admin_video_path(video), method: :delete, data: {confirm: "本当にこの動画情報を削除しますか?"}, class: "btn btn-outline-dark py-1" %>
+                            <%= button_to "削除", admin_video_path(video), method: :delete, data: {confirm: "本当にこの動画情報を削除しますか?"}, class: "btn btn-outline-dark py-1" %>
                         </div>
                     </div>
                     <hr>
