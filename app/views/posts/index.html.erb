@@ -79,6 +79,20 @@
             </div>    
         <% end %>
     </section>
+
+    <div class="card mb-3 mx-5">
+        <div class="mb-2 bg-white py-2 fx1">
+            <a class="fx2" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                Link with href
+            </a>
+        </div>
+    </div>
+    <div class="collapse" id="collapseExample">
+        <div class="card card-body mt-0 pt-0 mx-5">
+            Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+        </div>
+    </div>
+
     <div class="row">
         <div class="col-6 mx-auto px-auto mt-5">
             <div class="put-center"><%= will_paginate @posts %></div>
