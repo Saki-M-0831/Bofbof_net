@@ -87,4 +87,6 @@ gem 'geocoder', '~> 1.4'
 
 gem 'jquery-ui-rails', '~> 5.0'
 
+gem 'rails-ujs', '~> 5.1.0.beta1'
+
 gem 'ransack', '~> 2.0'

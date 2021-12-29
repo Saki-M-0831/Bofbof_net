@@ -12,7 +12,6 @@
 //
 
 //= require jquery3
-//= require jquery.flexslider-min
 //= require jquery-ujs
 //= require jquery-ui/datepicker
 //= require popper
