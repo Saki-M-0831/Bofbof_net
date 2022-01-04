@@ -30,18 +30,16 @@
         <% end %>
     </div>
     <section class="mx-5 text-black">
-        <% @posts.each_with_index do |post, index| %>
-            <div class="card w-100 mb-3" id="accordion">
+        <% @posts.each_with_index do |post| %>
+            <div class="card w-100 mb-3">
                 <div class="mb-2 bg-white py-2 fx1">
                     <div>
-                        <span>
-                            <a data-toggle="collapse" class="fx2" data-parent="#accordion" href="#collapse<%= index+1 %>" role="button" aria-expanded="false" aria-controls="collapse">
+                        <span class="fx2">
                             <%= post.title %>
-                            </a>
                             <i class="fas fa-sort-down fa-2x"></i>
                         </span>
                     </div>
-                    <div id="collapse<%= index+1 %>" class="collapse">
+                    <div>
                         <div class="">
                             <div class="row px-5 py-3">
                                 <div class="col-12 col-md-2 my-auto py-1">
