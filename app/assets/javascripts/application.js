@@ -12,11 +12,10 @@
 //
 
 //= require jquery3
-//= require jquery-ujs
-//= require jquery-ui/datepicker
-//= require popper
-//= require rails-ujs
 //= require bootstrap-sprockets
+//= require popper
+//= require jquery-ujs
+//= require rails-ujs
 //= require toastr
 //= require activestorage
 //= require turbolinks
