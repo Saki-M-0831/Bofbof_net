@@ -10,14 +10,29 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require rails-ujs
+
 //= require jquery3
-//= require jquery-ui/datepicker
-//= require popper
 //= require bootstrap-sprockets
+//= require popper
+//= require jquery-ujs
+//= require rails-ujs
 //= require toastr
 //= require activestorage
 //= require turbolinks
 //= require_tree .
 
 import '@fortawesome/fontawesome-free/js/all';
+
+app.use(helmet({
+    contentSecurityPolicy:{
+      directives:{
+        "default-src":["'self'"],
+        "script-src":["https://code.jquery.com/jquery-3.5.1.slim.min.js","'sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj'","https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js","'sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV'"],
+        "style-src": ["'self'","https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css","'unsafe-inline'"],
+        "object-src":["'none'"],
+  
+  
+      },
+    }
+  }
+  ));
